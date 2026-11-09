@@ -105,7 +105,7 @@ dialog img{display:block;width:100%;margin-top:8px}
 #search-personal-notes{display:inline-flex;align-items:center;min-height:44px;padding-inline:6px}
 @media(max-width:420px){.bottom-toolbar{gap:5px}.bottom-toolbar :is(a,button){padding-inline:8px}}
 
-.tool-seal{width:42px;height:42px;display:grid;place-content:center;text-align:center;line-height:1.05;letter-spacing:.07em;border:1px solid #824636;box-shadow:inset 0 0 0 2px #824636,inset 0 0 0 3px #f4e4cb}
+.tool-seal{width:42px;height:42px;display:grid;place-content:center;text-align:center;line-height:1.05;letter-spacing:.07em;border:1px solid #4a4540;box-shadow:inset 0 0 0 2px #4a4540,inset 0 0 0 3px #f4e4cb}
 .brand{font-family:var(--serif)}
 .reference-list{display:grid;gap:10px}
 .reference-list article{padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--white)}
@@ -209,7 +209,7 @@ main .reading,main .session p:not(.eyebrow,.note-meta),main .topic-content p:not
   background:color-mix(in srgb,var(--white) 42%,var(--paper));
 }
 .brand{font-family:var(--serif);font-size:clamp(1rem,4vw,1.15rem);letter-spacing:.06em}
-.tool-seal{background:var(--seal-ink);color:var(--seal-text);border-radius:3px;letter-spacing:.04em}
+.tool-seal{background:#4a4540;color:#fff7e9;border-radius:3px;letter-spacing:.04em}
 .bottom-toolbar{
   gap:6px;
   border:1px solid color-mix(in srgb,var(--accent) 43%,var(--line));
