@@ -309,6 +309,65 @@ main .reading,main .session p:not(.eyebrow,.note-meta),main .topic-content p:not
   left:-25%;
   bottom:-6%;
 }
+@media(min-width:800px){
+  .home-page{padding-bottom:0}
+  .home-page main{max-width:1120px;padding-inline:28px}
+  .home-page .mast{
+    padding:8px max(28px,calc((100% - 1064px)/2));
+  }
+  .home-page .bottom-toolbar{
+    position:static;
+    transform:none;
+    width:auto;
+    flex:none;
+    padding:0;
+    border:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  .home-page .bottom-toolbar :is(a,button){min-width:70px}
+  .home-hero{
+    grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);
+    grid-template-areas:"art intro" "art resume";
+    grid-template-rows:1fr auto;
+    min-height:clamp(340px,34vw,410px);
+    gap:0;
+    margin:24px 0 18px;
+    padding:0;
+    border-radius:18px;
+    overflow:hidden;
+    background:linear-gradient(115deg,#344345,#233134);
+    color:#fff8ea;
+  }
+  .home-folio{
+    grid-area:art;
+    align-self:stretch;
+    aspect-ratio:auto;
+    border-radius:0;
+    background:#eadcc4;
+  }
+  .home-folio img{width:115%;left:-7.5%}
+  .home-intro{
+    grid-area:intro;
+    align-self:end;
+    padding:32px clamp(24px,4.5vw,62px) 0;
+  }
+  .home-hero h1{font-size:clamp(3rem,5vw,4.25rem);margin-bottom:.35em}
+  .home-hero h1 span+span{color:#eadfca}
+  .home-hero .subtitle{color:#e3dfd4;margin:0}
+  .home-resume{
+    grid-area:resume;
+    justify-content:flex-start;
+    padding:22px clamp(24px,4.5vw,62px) 34px;
+  }
+  .home-resume a{
+    background:#eee4d1;
+    color:#293638;
+    border-color:#eee4d1;
+    font-size:.95rem;
+  }
+  .home-resume a+a{background:transparent;color:#fff8ea;border-color:#9da9a4}
+}
 .home-start{padding-block:0}
 .home-start>summary{
   display:flex;

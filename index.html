@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="prajna-release" content="080cb135d5a67eb44cd8">
+<meta name="prajna-release" content="87c3e6deb74d6bae2093">
 <meta name="theme-color" content="#e8dcc0">
 <meta name="apple-mobile-web-app-title" content="金剛經">
 <title>金剛經修行工具</title>
@@ -11,7 +11,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" href="./icons/prajna-192.png?v=2">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png?v=2">
-<link rel="stylesheet" href="./style.css?v=41">
+<link rel="stylesheet" href="./style.css?v=42">
 <script src="./reading-settings.js?v=13" defer></script>
 <script src="./site-update.js?v=6" defer></script>
 <script src="./legacy-links.js?v=3"></script>
@@ -20,6 +20,9 @@
 <header class="mast" id="page-top" tabindex="-1">
   <a href="./" class="brand"><span class="seal tool-seal" aria-hidden="true">金剛<br>般若</span> 金剛經修行工具</a>
   <span id="site-update-status" class="site-update-status" role="status"></span>
+  <nav class="bottom-toolbar" aria-label="頁面工具">
+    <a href="./" aria-current="page">首頁</a><a href="./journal.html#notebook-search">搜尋</a><button type="button" class="quiet" data-open-reading aria-haspopup="dialog" aria-label="閱讀設定">設定</button>
+  </nav>
 </header>
 <main data-reading-page="home">
   <section class="hero home-hero" aria-labelledby="page-title">
@@ -87,8 +90,9 @@
   <div data-first-visit></div>
   <!-- site-updates:start -->
   <details class="appendix" id="site-updates">
-    <summary>最近更新 · <time datetime="2026-11-09T13:06:48.470Z">2026/11/09 21:06</time>（臺灣時間）</summary>
+    <summary>最近更新 · <time datetime="2026-11-09T13:10:18.756Z">2026/11/09 21:10</time>（臺灣時間）</summary>
     <ul class="refs" id="site-update-list">
+      <li><time datetime="2026-11-09T13:10:18.756Z">2026/11/09 21:10</time> · 桌面首頁改用寬幅封面，讀誦入口集中在標題下方，搜尋與設定移到頁首。</li>
       <li><time datetime="2026-11-09T13:06:48.470Z">2026/11/09 21:06</time> · 首頁放大禪修插畫並移到左側，簡化標題，將讀經與背誦入口移到封面下方。</li>
       <li><time datetime="2026-11-09T13:00:00.465Z">2026/11/09 21:00</time> · 首頁快速上手可收合，封面換上禪修插畫，左上分別顯示上次讀經分次與背誦卡片。</li>
       <li><time datetime="2026-11-09T10:52:28.025Z">2026/11/09 18:52</time> · 快速上手、操作圖說、完整使用說明及讀經子工具提示，會跟著閱讀設定調整字體、字級和間距。</li>
@@ -163,9 +167,6 @@
 
 </main>
 <footer>工具製作：Tally.C</footer>
-<nav class="bottom-toolbar" aria-label="頁面工具">
-  <a href="./" aria-current="page">首頁</a><a href="./journal.html#notebook-search">搜尋</a><button type="button" class="quiet" data-open-reading aria-haspopup="dialog" aria-label="閱讀設定">設定</button>
-</nav>
   <dialog class="reading-panel reading-sheet" id="reading-settings" data-reading-settings aria-labelledby="reading-settings-title">
     <form method="dialog" class="dialog-header">
       <h2 id="reading-settings-title">閱讀設定</h2><button class="quiet" type="submit" autofocus>關閉</button>
