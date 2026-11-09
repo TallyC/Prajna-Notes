@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="prajna-release" content="5b42c714e0e22949b888">
+<meta name="theme-color" content="#e8dcc0">
+<meta name="apple-mobile-web-app-title" content="金剛經">
+<title>桌布｜金剛經修行工具</title>
+<meta name="description" content="循科判讀《金剛經》、記錄自己的理解，查閱圖卡與講記。">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/prajna-192.png?v=2">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="./style.css?v=39">
+<script src="./reading-settings.js?v=12" defer></script>
+<script src="./site-update.js?v=6" defer></script>
+<script src="./app.js?v=32" defer></script>
+</head>
+<body>
+<header class="mast" id="page-top" tabindex="-1">
+  <a href="./" class="brand"><span class="seal tool-seal" aria-hidden="true">金剛<br>般若</span> 金剛經修行工具</a>
+  <span id="site-update-status" class="site-update-status" role="status"></span>
+</header>
+<main data-reading-page="wallpapers">
+  <section id="wallpapers" aria-labelledby="wallpapers-title">
+    <p class="eyebrow">日常提醒</p>
+    <h2 id="wallpapers-title">手機桌布</h2>
+    <p class="intro">桌布法語列在對應圖片下方。點圖片可放大或下載到手機。</p>
+  <aside class="tool-start" aria-label="快速上手">
+    <p class="tool-start-title">快速上手</p>
+    <dl>
+      <div><dt>有什麼</dt><dd>可預覽、下載的手機桌布。</dd></div>
+      <div><dt>怎麼用</dt><dd>點圖看原圖，下載後到手機的桌布設定套用。看完可點「返回頁面」。</dd></div>
+      <div><dt>如何下手</dt><dd>從下方選一張想常看到的桌布。</dd></div>
+      <div><dt>工具助益</dt><dd>把選中的經句留在日常畫面，方便隨時回想。</dd></div>
+    </dl>
+    <a href="./guide.html#guide-wallpapers">查看完整使用說明</a>
+  </aside>
+  <details class="appendix tool-help">
+    <summary>桌布的使用說明</summary>
+      <figure class="guide-diagram">
+        <figcaption>操作圖說</figcaption>
+        <ol><li>點選桌布</li><li>下載圖片</li><li>在手機設定桌布</li></ol>
+      </figure>
+    <p>每張桌布下方有對應法語。點圖進入檢視後可下載原圖，再從手機的相片或桌布設定選用。</p>
+    <p><a href="./guide.html#guide-wallpapers">在「使用說明」查看完整步驟</a></p>
+  </details>
+    <div id="wallpaper-gallery" class="gallery wallpaper-gallery"></div>
+  </section>
+</main>
+<footer>工具製作：Tally.C</footer>
+<nav class="bottom-toolbar" aria-label="頁面工具">
+  <a href="./">首頁</a><a href="./journal.html#notebook-search">搜尋</a><button type="button" class="quiet" data-open-reading aria-haspopup="dialog" aria-label="閱讀設定">設定</button>
+</nav>
+  <dialog class="reading-panel reading-sheet" id="reading-settings" data-reading-settings aria-labelledby="reading-settings-title">
+    <form method="dialog" class="dialog-header">
+      <h2 id="reading-settings-title">閱讀設定</h2><button class="quiet" type="submit" autofocus>關閉</button>
+    </form>
+    <div class="reading-preview" data-reading-preview>
+      <p class="reading-preview-label">即時預覽 ·《金剛經》第三十二分</p>
+      <p class="reading">一切有為法，如夢、幻、泡、影。</p>
+      <p class="reading">如露亦如電，應作如是觀。</p>
+    </div>
+  </dialog>
+<dialog id="card-view" aria-labelledby="card-title">
+  <div class="dialog-header">
+    <h2 id="card-title"></h2>
+    <button id="card-close" type="button" class="quiet" autofocus>返回頁面</button>
+  </div>
+  <div class="image-actions">
+    <button id="card-zoom" type="button" class="quiet" aria-pressed="false">放大原圖</button>
+    <a id="image-download" download>下載圖片</a>
+  </div>
+  <div class="dialog-body" id="card-scroll">
+    <img id="card-image" alt="">
+  </div>
+</dialog>
+</body>
+</html>

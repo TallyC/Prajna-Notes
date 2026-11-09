@@ -18,7 +18,7 @@
 ## 網站入口
 
 - [金剛經修行工具 · 目前使用的網站](https://prajna-notes-three-views.tally325.chatgpt.site/)
-- GitHub Pages 入口待網站檔案同步、完成部署並驗證後補上。
+- [金剛經修行工具 · GitHub Pages](https://tallyc.github.io/Prajna-Notes/)
 
 ## 經文與參考資料
 

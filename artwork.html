@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="prajna-release" content="5b42c714e0e22949b888">
+<meta name="theme-color" content="#e8dcc0">
+<meta name="apple-mobile-web-app-title" content="金剛經">
+<title>圖卡｜金剛經修行工具</title>
+<meta name="description" content="循科判讀《金剛經》、記錄自己的理解，查閱圖卡與講記。">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/prajna-192.png?v=2">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="./style.css?v=39">
+<script src="./reading-settings.js?v=12" defer></script>
+<script src="./site-update.js?v=6" defer></script>
+<script src="./legacy-links.js?v=3"></script>
+<script src="./app.js?v=32" defer></script>
+</head>
+<body>
+<header class="mast" id="page-top" tabindex="-1">
+  <a href="./" class="brand"><span class="seal tool-seal" aria-hidden="true">金剛<br>般若</span> 金剛經修行工具</a>
+  <span id="site-update-status" class="site-update-status" role="status"></span>
+</header>
+<main data-reading-page="artwork">
+  <header class="hero gallery-hero">
+    <p class="eyebrow">以圖讀經</p>
+    <h1>圖卡</h1>
+    <p class="subtitle">從經文選句與講座圖像，回到原文和筆記。</p>
+    <nav class="gallery-jump" aria-label="圖卡分類">
+      <a href="#diamond-quotes">經文金句</a>
+      <a href="#cards">講座圖卡</a>
+      <a href="./wallpapers.html">手機桌布 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <aside class="tool-start" aria-label="快速上手">
+    <p class="tool-start-title">快速上手</p>
+    <dl>
+      <div><dt>有什麼</dt><dd>依經文分次整理的金句圖卡，以及講座圖卡。</dd></div>
+      <div><dt>怎麼看</dt><dd>點圖放大或下載。展開「圖卡文字」可讀內容，看完點「返回頁面」。</dd></div>
+      <div><dt>如何下手</dt><dd>先選「經文金句」或「講座圖卡」，再點一張。</dd></div>
+      <div><dt>工具助益</dt><dd>可從一張圖或一句經文回想重點，再回到原文看前後脈絡。</dd></div>
+    </dl>
+    <a href="./guide.html#guide-artwork">查看完整使用說明</a>
+  </aside>
+  <details class="appendix tool-help">
+    <summary>圖卡的使用說明</summary>
+      <figure class="guide-diagram">
+        <figcaption>操作圖說</figcaption>
+        <ol><li>選經文或講座圖卡</li><li>展開圖卡文字</li><li>讀經文上下文</li></ol>
+      </figure>
+    <p>經文金句按分次選句，講座圖卡搭配編者的筆記。點圖片可開啟檢視，再用「放大原圖」或「下載圖片」。</p>
+    <p>展開「圖卡文字」可讀圖上的文字。經文卡下方的「讀經文上下文」可回到對應段落。</p>
+    <p><a href="./guide.html#guide-artwork">在「使用說明」查看完整步驟</a></p>
+  </details>
+  <section id="diamond-quotes" aria-labelledby="diamond-quotes-title">
+    <p class="eyebrow">經文選讀</p>
+    <h2 id="diamond-quotes-title">《金剛經》金句圖卡</h2>
+    <p class="intro">三十二分選讀，共 37 張。赭紅色標示經句重點。點圖片可放大或下載，也可展開圖卡文字，讀經文上下文。</p>
+    <p><a href="https://cbetaonline.dila.edu.tw/zh/T0235">CBETA《金剛般若波羅蜜經》T0235</a></p>
+    <div id="scripture-gallery" class="gallery scripture-gallery"></div>
+  </section>
+  <section id="cards" aria-labelledby="cards-title">
+    <p class="eyebrow">講座圖像回顧</p>
+    <h2 id="cards-title">講座圖卡</h2>
+    <p class="intro">點圖片可放大，展開「圖卡文字」可讀取內容。各張圖卡的文字也放在相關筆記中。</p>
+    <div id="gallery" class="gallery"></div>
+    <p><a href="#diamond-quotes">查看《金剛經》金句圖卡</a></p>
+  </section>
+</main>
+<footer>工具製作：Tally.C</footer>
+<nav class="bottom-toolbar" aria-label="頁面工具">
+  <a href="./">首頁</a><a href="./journal.html#notebook-search">搜尋</a><button type="button" class="quiet" data-open-reading aria-haspopup="dialog" aria-label="閱讀設定">設定</button>
+</nav>
+  <dialog class="reading-panel reading-sheet" id="reading-settings" data-reading-settings aria-labelledby="reading-settings-title">
+    <form method="dialog" class="dialog-header">
+      <h2 id="reading-settings-title">閱讀設定</h2><button class="quiet" type="submit" autofocus>關閉</button>
+    </form>
+    <div class="reading-preview" data-reading-preview>
+      <p class="reading-preview-label">即時預覽 ·《金剛經》第三十二分</p>
+      <p class="reading">一切有為法，如夢、幻、泡、影。</p>
+      <p class="reading">如露亦如電，應作如是觀。</p>
+    </div>
+  </dialog>
+<dialog id="card-view" aria-labelledby="card-title">
+  <div class="dialog-header">
+    <h2 id="card-title"></h2>
+    <button id="card-close" type="button" class="quiet" autofocus>返回頁面</button>
+  </div>
+  <div class="image-actions">
+    <button id="card-zoom" type="button" class="quiet" aria-pressed="false">放大原圖</button>
+    <a id="image-download" download>下載圖片</a>
+  </div>
+  <div class="dialog-body" id="card-scroll">
+    <img id="card-image" alt="">
+  </div>
+</dialog>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="prajna-release" content="5b42c714e0e22949b888">
+<meta name="theme-color" content="#e8dcc0">
+<title>讀｜金剛經修行工具</title>
+<link rel="icon" href="./icons/prajna-192.png?v=2">
+<link rel="stylesheet" href="./style.css?v=39">
+<script src="./reading-settings.js?v=12" defer></script>
+<script src="./site-update.js?v=6" defer></script>
+<style>
+.kepan .hero{padding-bottom:18px}
+.kepan .k-index{margin-bottom:20px}
+.kepan .k-index label{display:block;font-weight:650;margin-bottom:5px}
+.kepan .k-index nav{margin-top:10px}
+.kepan .k-node{background:var(--white);border:1px solid var(--line);border-radius:8px;margin:6px 0}
+.kepan .k-node summary{padding:10px 9px;overflow-wrap:anywhere}
+.kepan .k-content{padding:0 8px 8px}
+.kepan .k-chapter,.kepan .code{font-size:.78rem;color:var(--muted)}
+.kepan .code{font-weight:400;white-space:nowrap}
+.kepan .k-chapter{margin:8px 0 2px;font-weight:700}
+.kepan .k-reading{margin:0 0 var(--reading-gap);line-height:var(--reading-line)}
+.kepan .chapter-actions{display:flex;flex-wrap:wrap;gap:4px 16px}
+.kepan .chapter-study{margin:0 0 12px;padding:4px 10px;border:1px solid var(--line);border-radius:8px}
+.kepan .chapter-study h3{margin:6px 0;font-size:1rem}
+.kepan .reading-guide-choice{border-top:1px solid var(--line)}
+.kepan .reading-guide-choice p{margin:0 10px 10px}
+.kepan .reading-guide-choice summary{padding-inline:10px}
+.kepan .chapter-sanskrit{white-space:pre-line;overflow-wrap:anywhere}
+.kepan footer{padding-top:10px}
+@media(max-width:420px){.kepan main{padding-inline:12px}.kepan .k-content{padding-inline:5px}}
+.kepan .k-locator{font-size:.78rem;color:var(--muted);margin:6px 0}
+.kepan .k-table-wrap{overflow-x:auto}
+.kepan table{border-collapse:collapse;min-width:570px;width:100%;text-align:left;font-size:.9rem}
+.kepan th,.kepan td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top}
+.kepan td:last-child{white-space:nowrap}
+</style>
+<script src="./reading-notes.js?v=1" defer></script>
+<script src="./reading-guides.js?v=6" defer></script>
+<script src="./document-viewer.js?v=1" defer></script>
+</head>
+<body class="kepan">
+<header class="mast" id="page-top" tabindex="-1">
+  <a class="brand" href="./"><span class="seal tool-seal" aria-hidden="true">金剛<br>般若</span> 金剛經修行工具</a>
+  <span id="site-update-status" class="site-update-status" role="status"></span>
+  <a href="./">回首頁</a>
+</header>
+<main data-reading-page="reader">
+  <header class="hero">
+    <p class="eyebrow">金剛般若波羅蜜經 · 逐段讀經</p>
+    <h1>讀</h1>
+    <p class="intro">依印順導師的科判展開經文，也可用傳統三十二分跳讀。同一分有時分屬多個科判，一個科判也可能跨分。每一分可展開「研讀經文」，選擇解說來源可前往原書對應位置。</p>
+  </header>
+  <div data-first-visit></div>
+  <aside class="tool-start" aria-label="快速上手">
+    <p class="tool-start-title">快速上手</p>
+    <dl>
+      <div><dt>有什麼</dt><dd>經文、科判、法義、梵文與三家的研讀來源。</dd></div>
+      <div><dt>怎麼用</dt><dd>經文下方可展開法義與梵文、研讀經文，也可點「背誦」或「修行記錄」。</dd></div>
+      <div><dt>如何下手</dt><dd>在「按傳統分次跳讀」選一分。想依義理脈絡讀，就選下方的科判。</dd></div>
+      <div><dt>工具助益</dt><dd>先讀經文，再用解說釐清疑問，並把理解帶到背誦與修行記錄。</dd></div>
+    </dl>
+    <a href="./guide.html#guide-reader">查看完整使用說明</a>
+  </aside>
+  <details class="appendix tool-help">
+    <summary>讀的使用說明</summary>
+      <figure class="guide-diagram">
+        <figcaption>操作圖說</figcaption>
+        <ol><li>選分次或科判</li><li>展開經文</li><li>選一位老師對讀</li></ol>
+      </figure>
+    <figure class="guide-diagram">
+      <figcaption>同一段經文的兩個入口</figcaption>
+      <div class="guide-branches">
+        <p><strong>按分次</strong><br>目 · 第 4 分</p>
+        <p><strong>按科判</strong><br>般若道 · 伏心菩提</p>
+        <p class="guide-branch-target">↓ 讀到第 4 分〈妙行無住〉</p>
+      </div>
+    </figure>
+    <p>知道分次時，用「按傳統分次跳讀」。想依脈絡閱讀，可選「序分、般若道、方便道、流通分」，再展開科判。由目錄跳入時，工具會展開該分所在的段落。</p>
+    <p>「本分法義與梵文」可先讀導讀，再查詞彙。「研讀經文」按印順長老、聖嚴法師或江味農居士的姓名展開來源。聖嚴法師條目先列本站對照經句，下方另開《法鼓全集》原書頁面，並標出行數。資料缺項會在該分標示。</p>
+      <p>要回來，關閉原書分頁即可。站內 PDF 或圖卡可按「返回頁面」。展開的說明或解說，點一次標題即可收合。</p>
+    <p><a href="./guide.html#guide-reader">在「使用說明」查看完整步驟</a></p>
+  </details>
+  <div class="k-index" id="kepan-overview">
+    <p><a href="./contents.html">查看三十二分目錄</a></p>
+    <label for="chapter-select">按傳統分次跳讀</label>
+    <select id="chapter-select"><option value="">選擇第 1 至 32 分</option><option value="chapter-1">第 1 分 · 法會因由</option><option value="chapter-2">第 2 分 · 善現啟請</option><option value="chapter-3">第 3 分 · 大乘正宗</option><option value="chapter-4">第 4 分 · 妙行無住</option><option value="chapter-5">第 5 分 · 如理實見</option><option value="chapter-6">第 6 分 · 正信希有</option><option value="chapter-7">第 7 分 · 無得無說</option><option value="chapter-8">第 8 分 · 依法出生</option><option value="chapter-9">第 9 分 · 一相無相</option><option value="chapter-10">第 10 分 · 莊嚴淨土</option><option value="chapter-11">第 11 分 · 無為福勝</option><option value="chapter-12">第 12 分 · 尊重正教</option><option value="chapter-13">第 13 分 · 如法受持</option><option value="chapter-14">第 14 分 · 離相寂滅</option><option value="chapter-15">第 15 分 · 持經功德</option><option value="chapter-16">第 16 分 · 能淨業障</option><option value="chapter-17">第 17 分 · 究竟無我</option><option value="chapter-18">第 18 分 · 一體同觀</option><option value="chapter-19">第 19 分 · 法界通化</option><option value="chapter-20">第 20 分 · 離色離相</option><option value="chapter-21">第 21 分 · 非說所說</option><option value="chapter-22">第 22 分 · 無法可得</option><option value="chapter-23">第 23 分 · 淨心行善</option><option value="chapter-24">第 24 分 · 福智無比</option><option value="chapter-25">第 25 分 · 化無所化</option><option value="chapter-26">第 26 分 · 法身非相</option><option value="chapter-27">第 27 分 · 無斷無滅</option><option value="chapter-28">第 28 分 · 不受不貪</option><option value="chapter-29">第 29 分 · 威儀寂靜</option><option value="chapter-30">第 30 分 · 一合相理</option><option value="chapter-31">第 31 分 · 知見不生</option><option value="chapter-32">第 32 分 · 應化非真</option></select>
+    <nav class="tabs" aria-label="科判主節點">
+      <a href="#k-70">序分</a><a href="#k-94">般若道</a><a href="#k-373">方便道</a><a href="#k-535">流通分</a><a href="#k-audit">對齊與驗證</a>
+    </nav>
+  </div>
+  <section aria-label="完整科判與經文">
+<details class="k-node" id="k-70" open><summary>甲一 序分 <span class="code">A-16</span></summary><div class="k-content">
+<details class="k-node" id="k-71"><summary>乙一 證信序</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 748c20–748c21</p>
+<p class="k-chapter" data-chapter="1" id="chapter-1">第 1 分 · 法會因由</p>
+<p class="reading k-reading">如是我聞：一時，佛在舍衛國祇樹給孤獨園，與大比丘眾千二百五十人俱。</p>
+</div></details>
+<details class="k-node" id="k-87"><summary>乙二 發起序</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 748c21–748c24</p>
+<p class="k-chapter" data-chapter="1">第 1 分 · 法會因由</p>
+<p class="reading k-reading">爾時，世尊，食時，著衣持鉢，入舍衛大城乞食。於其城中次第乞已，還至本處。飯食訖，收衣鉢。洗足已，敷座而坐。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-92" open><summary>甲二 正宗分 <span class="code">A-17</span></summary><div class="k-content">
+<details class="k-node" id="k-94"><summary>乙一 般若道次第 <span class="code">A-17</span></summary><div class="k-content">
+<details class="k-node" id="k-96"><summary>丙一 開示次第 <span class="code">A-17</span></summary><div class="k-content">
+<details class="k-node" id="k-97"><summary>丁一 請說</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 748c24–748c29</p>
+<p class="k-chapter" data-chapter="2" id="chapter-2">第 2 分 · 善現啟請</p>
+<p class="reading k-reading">時，長老須菩提，在大眾中，即從座起，偏袒右肩，右膝著地，合掌恭敬而白佛言：「希有！世尊！如來善護念諸菩薩，善付囑諸菩薩！世尊！善男子善女人發阿耨多羅三藐三菩提心，應云何住？云何降伏其心？」</p>
+</div></details>
+<details class="k-node" id="k-107"><summary>丁二 許說</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 748c29–749a04</p>
+<p class="k-chapter" data-chapter="2">第 2 分 · 善現啟請</p>
+<p class="reading k-reading">佛言：「善哉！善哉！須菩提！如汝所說『如來善護念諸菩薩，善付囑諸菩薩』。汝今諦聽，當為汝說。善男子善女人發阿耨多羅三藐三菩提心，應如是住，如是降伏其心！」「唯然，世尊！願樂欲聞！」</p>
+</div></details>
+<details class="k-node" id="k-115"><summary>丁三 正說</summary><div class="k-content">
+<details class="k-node" id="k-116"><summary>戊一 發心菩提 <span class="code">A-18</span></summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749a05–749a11</p>
+<p class="k-chapter" data-chapter="3" id="chapter-3">第 3 分 · 大乘正宗</p>
+<p class="reading k-reading">佛告須菩提：「諸菩薩摩訶薩應如是降伏其心：所有一切眾生之類——若卵生，若胎生，若溼生，若化生；若有色，若無色；若有想，若無想，若非有想非無想，我皆令入無餘涅槃而滅度之。如是滅度無量無數無邊眾生，實無眾生得滅度者。何以故？須菩提！若菩薩有我相、人相、眾生相、壽者相，即非菩薩。</p>
+</div></details>
+<details class="k-node" id="k-128"><summary>戊二 伏心菩提 <span class="code">A-20</span></summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749a12–749a20</p>
+<p class="k-chapter" data-chapter="4" id="chapter-4">第 4 分 · 妙行無住</p>
+<p class="reading k-reading">復次，須菩提！菩薩於法應無所住行於布施，所謂不住色布施，不住聲、香、味、觸、法布施。須菩提！菩薩應如是布施，不住於相。何以故？若菩薩不住相布施，其福德不可思量。須菩提！於意云何？東方虛空可思量不？」「不也，世尊！」「須菩提！南、西、北方、四維、上、下虛空可思量不？」「不也，世尊！」「須菩提！菩薩無住相布施，福德亦復如是不可思量。須菩提！菩薩但應如所教住！</p>
+</div></details>
+<details class="k-node" id="k-137"><summary>戊三 明心菩提 <span class="code">A-22</span></summary><div class="k-content">
+<details class="k-node" id="k-138"><summary>己一 法身離相而見 <span class="code">A-22</span></summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749a21–749a25</p>
+<p class="k-chapter" data-chapter="5" id="chapter-5">第 5 分 · 如理實見</p>
+<p class="reading k-reading">須菩提！於意云何？可以身相見如來不？」「不也，世尊！不可以身相得見如來。何以故？如來所說身相，即非身相。」佛告須菩提：「凡所有相皆是虛妄；若見諸相非相，則見如來。」</p>
+</div></details>
+<details class="k-node" id="k-147"><summary>己二 眾生久行乃信 <span class="code">A-23</span></summary><div class="k-content">
+<details class="k-node" id="k-149"><summary>庚一 問</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749a26–749a27</p>
+<p class="k-chapter" data-chapter="6" id="chapter-6">第 6 分 · 正信希有</p>
+<p class="reading k-reading">須菩提白佛言：「世尊！頗有眾生得聞如是言說章句，生實信不？」</p>
+</div></details>
+<details class="k-node" id="k-157"><summary>庚二 答</summary><div class="k-content">
+<details class="k-node" id="k-158"><summary>辛一 戒慧具足</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749a27–749a29</p>
+<p class="k-chapter" data-chapter="6">第 6 分 · 正信希有</p>
+<p class="reading k-reading">佛告須菩提：「莫作是說！如來滅後後五百歲，有持戒修福者，於此章句能生信心，以此為實。</p>
+</div></details>
+<details class="k-node" id="k-163"><summary>辛二 久集善根</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749a29–749b02</p>
+<p class="k-chapter" data-chapter="6">第 6 分 · 正信希有</p>
+<p class="reading k-reading">當知是人，不於一佛二佛三四五佛而種善根，已於無量千萬佛所種諸善根。</p>
+</div></details>
+<details class="k-node" id="k-168"><summary>辛三 諸佛攝持</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749b02–749b04</p>
+<p class="k-chapter" data-chapter="6">第 6 分 · 正信希有</p>
+<p class="reading k-reading">聞是章句乃至一念生淨信者，須菩提！如來悉知悉見；是諸眾生得如是無量福德。</p>
+</div></details>
+<details class="k-node" id="k-173"><summary>辛四 三相並寂</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749b04–749b11</p>
+<p class="k-chapter" data-chapter="6">第 6 分 · 正信希有</p>
+<p class="reading k-reading">何以故？是諸眾生無復我相、人相、眾生相、壽者相，無法相，亦無非法相。何以故？是諸眾生，若心取相，則為著我、人、眾生、壽者。若取法相，即著我、人、眾生、壽者。何以故？若取非法相，即著我、人、眾生、壽者。是故不應取法，不應取非法。以是義故，如來常說：『汝等比丘！知我說法如筏喻者，法尚應捨，何況非法！』</p>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-183"><summary>己三 賢聖無為同證 <span class="code">B-2</span></summary><div class="k-content">
+<details class="k-node" id="k-185"><summary>庚一 舉如來為證</summary><div class="k-content">
+<details class="k-node" id="k-186"><summary>辛一 正說</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749b12–749b18</p>
+<p class="k-chapter" data-chapter="7" id="chapter-7">第 7 分 · 無得無說</p>
+<p class="reading k-reading">須菩提！於意云何？如來得阿耨多羅三藐三菩提耶？如來有所說法耶？」須菩提言：「如我解佛所說義，無有定法名阿耨多羅三藐三菩提，亦無有定法如來可說。何以故？如來所說法，皆不可取、不可說，非法非非法。所以者何？一切賢聖皆以無為法而有差別。」</p>
+</div></details>
+<details class="k-node" id="k-193"><summary>辛二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749b18–749b25</p>
+<p class="k-chapter" data-chapter="8" id="chapter-8">第 8 分 · 依法出生</p>
+<p class="reading k-reading">「須菩提！於意云何？若人滿三千大千世界七寶以用布施，是人所得福德寧為多不？」須菩提言：「甚多，世尊！何以故？是福德，即非福德性，是故如來說福德多。」「若復有人於此經中，受持乃至四句偈等，為他人說，其福勝彼。何以故？須菩提！一切諸佛及諸佛阿耨多羅三藐三菩提法，皆從此經出。須菩提！所謂佛法者，即非佛法。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-204"><summary>庚二 舉聲聞為證</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749b26–749c15</p>
+<p class="k-chapter" data-chapter="9" id="chapter-9">第 9 分 · 一相無相</p>
+<p class="reading k-reading">須菩提！於意云何？須陀洹能作是念：我得須陀洹果不？」須菩提言：「不也，世尊！何以故？須陀洹名為入流，而無所入，不入色、聲、香、味、觸、法，是名須陀洹。」「須菩提！於意云何？斯陀含能作是念：我得斯陀含果不？」須菩提言：「不也，世尊！何以故？斯陀含名一往來，而實無往來，是名斯陀含。」「須菩提！於意云何？阿那含能作是念：我得阿那含果不？」須菩提言：「不也，世尊！何以故？阿那含名為不來，而實無不來，是故名阿那含。」「須菩提！於意云何？阿羅漢能作是念：我得阿羅漢道不？」須菩提言：「不也，世尊！何以故？實無有法名阿羅漢。世尊！若阿羅漢作是念——我得阿羅漢道，即為著我、人、眾生、壽者。世尊！佛說我得無諍三昧人中最為第一，是第一離欲阿羅漢。我不作是念：我是離欲阿羅漢。世尊！我若作是念——我得阿羅漢道，世尊則不說須菩提是樂阿蘭那行者。以須菩提實無所行，而名須菩提是樂阿蘭那行。」</p>
+</div></details>
+<details class="k-node" id="k-216"><summary>庚三 舉菩薩為證</summary><div class="k-content">
+<details class="k-node" id="k-218"><summary>辛一 正說</summary><div class="k-content">
+<details class="k-node" id="k-219"><summary>壬一 得無生忍</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749c16–749c18</p>
+<p class="k-chapter" data-chapter="10" id="chapter-10">第 10 分 · 莊嚴淨土</p>
+<p class="reading k-reading">佛告須菩提：「於意云何？如來昔在然燈佛所，於法有所得不？」「不也，世尊！如來在然燈佛所，於法實無所得。」</p>
+</div></details>
+<details class="k-node" id="k-223"><summary>壬二 嚴淨佛土</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749c18–749c23</p>
+<p class="k-chapter" data-chapter="10">第 10 分 · 莊嚴淨土</p>
+<p class="reading k-reading">「須菩提！於意云何？菩薩莊嚴佛土不？」「不也，世尊！何以故？莊嚴佛土者，則非莊嚴，是名莊嚴。」「是故，須菩提！諸菩薩摩訶薩，應如是生清淨心，不應住色生心，不應住聲、香、味、觸、法生心，應無所住而生其心！</p>
+</div></details>
+<details class="k-node" id="k-231"><summary>壬三 成法性身</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749c23–749c25</p>
+<p class="k-chapter" data-chapter="10">第 10 分 · 莊嚴淨土</p>
+<p class="reading k-reading">須菩提！譬如有人身如須彌山王，於意云何？是身為大不？」須菩提言：「甚大，世尊！何以故？佛說非身，是名大身。」</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-238"><summary>辛二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 749c25–750a10</p>
+<p class="k-chapter" data-chapter="11" id="chapter-11">第 11 分 · 無為福勝</p>
+<p class="reading k-reading">「須菩提！如恆河中所有沙數，如是沙等恆河，於意云何？是諸恆河沙寧為多不？」須菩提言：「甚多，世尊！但諸恆河尚多無數，何況其沙？」「須菩提！我今實言告汝：若有善男子、善女人，以七寶滿爾所恆河沙數三千大千世界，以用布施，得福多不？」須菩提言：「甚多，世尊！」佛告須菩提：「若善男子善女人，於此經中乃至受持四句偈等，為他人說，而此福德勝前福德。</p>
+<p class="k-chapter" data-chapter="12" id="chapter-12">第 12 分 · 尊重正教</p>
+<p class="reading k-reading">復次，須菩提！隨說是經乃至四句偈等，當知此處一切世間天、人、阿修羅皆應供養如佛塔廟，何況有人盡能受持、讀誦！須菩提！當知是人成就最上第一希有之法！若是經典所在之處，則為有佛，若尊重弟子。」</p>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-249"><summary>丙二 勸發奉持 <span class="code">B-14</span></summary><div class="k-content">
+<details class="k-node" id="k-251"><summary>丁一 示奉持行相</summary><div class="k-content">
+<details class="k-node" id="k-253"><summary>戊一 問</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750a11–750a12</p>
+<p class="k-chapter" data-chapter="13" id="chapter-13">第 13 分 · 如法受持</p>
+<p class="reading k-reading">爾時，須菩提白佛言：「世尊！當何名此經，我等云何奉持？」</p>
+</div></details>
+<details class="k-node" id="k-259"><summary>戊二 答</summary><div class="k-content">
+<details class="k-node" id="k-261"><summary>己一 正說</summary><div class="k-content">
+<details class="k-node" id="k-262"><summary>庚一 化法離言</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750a12–750a16</p>
+<p class="k-chapter" data-chapter="13">第 13 分 · 如法受持</p>
+<p class="reading k-reading">佛告須菩提：「是經名為金剛般若波羅蜜，以是名字，汝當奉持！所以者何？須菩提！佛說般若波羅蜜，則非般若波羅蜜。須菩提！於意云何？如來有所說法不？」須菩提白佛言：「世尊！如來無所說。」</p>
+</div></details>
+<details class="k-node" id="k-270"><summary>庚二 化處非實</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750a16–750a20</p>
+<p class="k-chapter" data-chapter="13">第 13 分 · 如法受持</p>
+<p class="reading k-reading">「須菩提！於意云何？三千大千世界所有微塵，是為多不？」須菩提言：「甚多，世尊！」「須菩提！諸微塵，如來說非微塵，是名微塵。如來說世界，非世界，是名世界。</p>
+</div></details>
+<details class="k-node" id="k-277"><summary>庚三 化主無相</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750a20–750a23</p>
+<p class="k-chapter" data-chapter="13">第 13 分 · 如法受持</p>
+<p class="reading k-reading">須菩提！於意云何？可以三十二相見如來不？」「不也，世尊！不可以三十二相得見如來。何以故？如來說三十二相，即是非相，是名三十二相。」</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-284"><summary>己二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750a23–750a26</p>
+<p class="k-chapter" data-chapter="13">第 13 分 · 如法受持</p>
+<p class="reading k-reading">「須菩提！若有善男子善女人，以恆河沙等身命布施；若復有人，於此經中乃至受持四句偈等，為他人說，其福甚多！」</p>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-290"><summary>丁二 歎奉持功德</summary><div class="k-content">
+<details class="k-node" id="k-292"><summary>戊一 空生歎法美人</summary><div class="k-content">
+<details class="k-node" id="k-293"><summary>己一 深法難遇歎</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750a27–750b01</p>
+<p class="k-chapter" data-chapter="14" id="chapter-14">第 14 分 · 離相寂滅</p>
+<p class="reading k-reading">爾時，須菩提聞說是經，深解義趣，涕淚悲泣而白佛言：「希有！世尊！佛說如是甚深經典，我從昔來所得慧眼，未曾得聞如是之經！</p>
+</div></details>
+<details class="k-node" id="k-300"><summary>己二 信者難能歎</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750b01–750b09</p>
+<p class="k-chapter" data-chapter="14">第 14 分 · 離相寂滅</p>
+<p class="reading k-reading">世尊！若復有人得聞是經，信心清淨，則生實相，當知是人成就第一希有功德。世尊！是實相者，則是非相，是故如來說名實相。世尊！我今得聞如是經典，信解受持，不足為難。若當來世後五百歲，其有眾生得聞是經，信解受持，是人則為第一希有！何以故？此人無我相、人相、眾生相、壽者相。所以者何？我相即是非相，人相、眾生相、壽者相即是非相。何以故？離一切諸相，則名諸佛。」</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-306"><summary>戊二 如來勸行歎勝</summary><div class="k-content">
+<details class="k-node" id="k-308"><summary>己一 略歎勸行</summary><div class="k-content">
+<details class="k-node" id="k-310"><summary>庚一 正說</summary><div class="k-content">
+<details class="k-node" id="k-311"><summary>辛一 略歎</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750b09–750b13</p>
+<p class="k-chapter" data-chapter="14">第 14 分 · 離相寂滅</p>
+<p class="reading k-reading">佛告須菩提：「如是！如是！若復有人得聞是經，不驚、不怖、不畏，當知是人甚為希有！何以故？須菩提！如來說第一波羅蜜，非第一波羅蜜，是名第一波羅蜜。</p>
+</div></details>
+<details class="k-node" id="k-315"><summary>辛二 勸行</summary><div class="k-content">
+<details class="k-node" id="k-316"><summary>壬一 忍辱離相勸</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750b13–750b27</p>
+<p class="k-chapter" data-chapter="14">第 14 分 · 離相寂滅</p>
+<p class="reading k-reading">須菩提！忍辱波羅蜜，如來說非忍辱波羅蜜。何以故？須菩提！如我昔為歌利王割截身體，我於爾時無我相、無人相、無眾生相、無壽者相。何以故？我於往昔節節支解時，若有我相、人相、眾生相、壽者相，應生瞋恨。須菩提！又念過去於五百世作忍辱仙人，於爾所世無我相、無人相、無眾生相、無壽者相。是故，須菩提！菩薩應離一切相發阿耨多羅三藐三菩提心！不應住色生心，不應住聲、香、味、觸、法生心，應生無所住心！若心有住，則為非住，是故佛說菩薩心不應住色布施。須菩提！菩薩為利益一切眾生，應如是布施！如來說一切諸相，即是非相；又說一切眾生，則非眾生。</p>
+</div></details>
+<details class="k-node" id="k-328"><summary>壬二 佛說無虛勸</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750b27–750c03</p>
+<p class="k-chapter" data-chapter="14">第 14 分 · 離相寂滅</p>
+<p class="reading k-reading">須菩提！如來是真語者，實語者，如語者，不誑語者，不異語者。須菩提！如來所得法，此法無實無虛。須菩提！若菩薩心住於法而行布施，如人入闇，則無所見；若菩薩心不住法而行布施，如人有目，日光明照，見種種色。</p>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-336"><summary>庚二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750c03–750c12</p>
+<p class="k-chapter" data-chapter="14">第 14 分 · 離相寂滅</p>
+<p class="reading k-reading">須菩提！當來之世，若有善男子善女人，能於此經受持、讀誦，則為如來以佛智慧悉知是人，悉見是人，皆得成就無量無邊功德。</p>
+<p class="k-chapter" data-chapter="15" id="chapter-15">第 15 分 · 持經功德</p>
+<p class="reading k-reading">須菩提！若有善男子善女人，初日分以恆河沙等身布施，中日分復以恆河沙等身布施，後日分亦以恆河沙等身布施，如是無量百千萬億劫以身布施；若復有人聞此經典信心不逆，其福勝彼，何況書寫、受持、讀誦、為人解說！</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-340"><summary>己二 廣歎顯勝</summary><div class="k-content">
+<details class="k-node" id="k-342"><summary>庚一 正說</summary><div class="k-content">
+<details class="k-node" id="k-343"><summary>辛一 獨被大乘勝</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750c12–750c20</p>
+<p class="k-chapter" data-chapter="15">第 15 分 · 持經功德</p>
+<p class="reading k-reading">須菩提！以要言之，是經有不可思議、不可稱量、無邊功德！如來為發大乘者說，為發最上乘者說。若有人能受持、讀誦、廣為人說，如來悉知是人、悉見是人，皆得成就不可量、不可稱、無有邊、不可思議功德。如是人等，則為荷擔如來阿耨多羅三藐三菩提。何以故？須菩提！若樂小法者，著我見、人見、眾生見、壽者見，則於此經不能聽受、讀誦、為人解說。</p>
+</div></details>
+<details class="k-node" id="k-352"><summary>辛二 世間所尊勝</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750c20–750c23</p>
+<p class="k-chapter" data-chapter="15">第 15 分 · 持經功德</p>
+<p class="reading k-reading">須菩提！在在處處若有此經，一切世間天、人、阿修羅所應供養；當知此處則為是塔，皆應恭敬作禮圍繞，以諸華香而散其處。</p>
+</div></details>
+<details class="k-node" id="k-356"><summary>辛三 轉滅罪業勝</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750c24–750c27</p>
+<p class="k-chapter" data-chapter="16" id="chapter-16">第 16 分 · 能淨業障</p>
+<p class="reading k-reading">復次，須菩提！善男子善女人，受持、讀誦此經，若為人輕賤，是人先世罪業應墮惡道，以今世人輕賤故，先世罪業則為消滅，當得阿耨多羅三藐三菩提。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-362"><summary>庚二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 750c27–751a04</p>
+<p class="k-chapter" data-chapter="16">第 16 分 · 能淨業障</p>
+<p class="reading k-reading">須菩提！我念過去無量阿僧祇劫，於然燈佛前，得值八百四千萬億那由他諸佛，悉皆供養承事，無空過者。若復有人於後末世，能受持、讀誦此經所得功德，於我所供養諸佛功德，百分不及一，千萬億分乃至算數譬喻所不能及。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-367"><summary>己三 結歎難思</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751a04–751a07</p>
+<p class="k-chapter" data-chapter="16">第 16 分 · 能淨業障</p>
+<p class="reading k-reading">須菩提！若善男子善女人，於後末世，有受持、讀誦此經所得功德，我若具說者，或有人聞，心則狂亂，狐疑不信。須菩提！當知是經義不可思議，果報亦不可思議！」</p>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-373"><summary>乙二 方便道次第 <span class="code">B-26</span></summary><div class="k-content">
+<details class="k-node" id="k-375"><summary>丙一 開示次第 <span class="code">B-26</span></summary><div class="k-content">
+<details class="k-node" id="k-376"><summary>丁一 請問</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751a08–751a10</p>
+<p class="k-chapter" data-chapter="17" id="chapter-17">第 17 分 · 究竟無我</p>
+<p class="reading k-reading">爾時，須菩提白佛言：「世尊！善男子善女人，發阿耨多羅三藐三菩提心，云何應住？云何降伏其心？」</p>
+</div></details>
+<details class="k-node" id="k-382"><summary>丁二 答說</summary><div class="k-content">
+<details class="k-node" id="k-384"><summary>戊一 明心菩提 <span class="code">B-27</span></summary><div class="k-content">
+<details class="k-node" id="k-385"><summary>己一 真發菩提心</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751a10–751a16</p>
+<p class="k-chapter" data-chapter="17">第 17 分 · 究竟無我</p>
+<p class="reading k-reading">佛告須菩提：「善男子善女人發阿耨多羅三藐三菩提心者，當生如是心：我應滅度一切眾生，滅度一切眾生已，而無有一眾生實滅度者。何以故？須菩提！若菩薩有我相、人相、眾生相、壽者相，則非菩薩。所以者何？須菩提！實無有法發阿耨多羅三藐三菩提心者。</p>
+</div></details>
+<details class="k-node" id="k-390"><summary>己二 分證菩提果</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751a16–751b03</p>
+<p class="k-chapter" data-chapter="17">第 17 分 · 究竟無我</p>
+<p class="reading k-reading">須菩提！於意云何？如來於然燈佛所，有法得阿耨多羅三藐三菩提不？」「不也，世尊！如我解佛所說義，佛於然燈佛所，無有法得阿耨多羅三藐三菩提。」佛言：「如是！如是！須菩提！實無有法如來得阿耨多羅三藐三菩提。須菩提！若有法如來得阿耨多羅三藐三菩提者，然燈佛則不與我授記：『汝於來世當得作佛，號釋迦牟尼。』以實無有法得阿耨多羅三藐三菩提，是故然燈佛與我授記，作是言：『汝於來世當得作佛，號釋迦牟尼。』何以故？如來者，即諸法如義。若有人言：如來得阿耨多羅三藐三菩提。須菩提！實無有法佛得阿耨多羅三藐三菩提。須菩提！如來所得阿耨多羅三藐三菩提，於是中無實無虛，是故如來說一切法皆是佛法。須菩提！所言一切法者，即非一切法，是故名一切法。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-399"><summary>戊二 出到菩提 <span class="code">C-2</span></summary><div class="k-content">
+<details class="k-node" id="k-401"><summary>己一 成就法身</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751b03–751b05</p>
+<p class="k-chapter" data-chapter="17">第 17 分 · 究竟無我</p>
+<p class="reading k-reading">須菩提！譬如人身長大。」須菩提言：「世尊！如來說人身長大，則為非大身，是名大身。」</p>
+</div></details>
+<details class="k-node" id="k-408"><summary>己二 成熟眾生</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751b05–751b09</p>
+<p class="k-chapter" data-chapter="17">第 17 分 · 究竟無我</p>
+<p class="reading k-reading">「須菩提！菩薩亦如是，若作是言——我當滅度無量眾生，則不名菩薩。何以故？須菩提！實無有法名為菩薩。是故佛說：一切法無我、無人、無眾生、無壽者。</p>
+</div></details>
+<details class="k-node" id="k-413"><summary>己三 莊嚴佛土</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751b09–751b12</p>
+<p class="k-chapter" data-chapter="17">第 17 分 · 究竟無我</p>
+<p class="reading k-reading">須菩提！若菩薩作是言——我當莊嚴佛土，是不名菩薩。何以故？如來說莊嚴佛土者，即非莊嚴，是名莊嚴。須菩提！若菩薩通達無我法者，如來說名真是菩薩。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-421"><summary>戊三 究竟菩提 <span class="code">C-4</span></summary><div class="k-content">
+<details class="k-node" id="k-423"><summary>己一 圓證法身功德</summary><div class="k-content">
+<details class="k-node" id="k-425"><summary>庚一 正說</summary><div class="k-content">
+<details class="k-node" id="k-426"><summary>辛一 知見圓明</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751b13–751b28</p>
+<p class="k-chapter" data-chapter="18" id="chapter-18">第 18 分 · 一體同觀</p>
+<p class="reading k-reading">須菩提！於意云何？如來有肉眼不？」「如是！世尊！如來有肉眼。」「須菩提！於意云何？如來有天眼不？」「如是！世尊！如來有天眼。」「須菩提！於意云何？如來有慧眼不？」「如是！世尊！如來有慧眼。」「須菩提！於意云何？如來有法眼不？」「如是！世尊！如來有法眼。」「須菩提！於意云何？如來有佛眼不？」「如是！世尊！如來有佛眼。」「須菩提！於意云何？如恆河中所有沙，佛說是沙不？」「如是！世尊！如來說是沙。」「須菩提！於意云何？如一恆河中所有沙，有如是沙等恆河，是諸恆河所有沙數佛世界，如是寧為多不？」「甚多！世尊！」佛告須菩提：「爾所國土中所有眾生若干種心，如來悉知。何以故？如來說諸心，皆為非心，是名為心。所以者何？須菩提！過去心不可得，現在心不可得，未來心不可得。</p>
+</div></details>
+<details class="k-node" id="k-435"><summary>辛二 福德眾多</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751b29–751c04</p>
+<p class="k-chapter" data-chapter="19" id="chapter-19">第 19 分 · 法界通化</p>
+<p class="reading k-reading">須菩提！於意云何？若有人滿三千大千世界七寶以用布施，是人以是因緣，得福多不？」「如是！世尊！此人以是因緣，得福甚多。」「須菩提！若福德有實，如來不說得福德多；以福德無故，如來說得福德多。</p>
+</div></details>
+<details class="k-node" id="k-440"><summary>辛三 身相具足</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751c05–751c11</p>
+<p class="k-chapter" data-chapter="20" id="chapter-20">第 20 分 · 離色離相</p>
+<p class="reading k-reading">須菩提！於意云何？佛可以具足色身見不？」「不也，世尊！如來不應以具足色身見。何以故？如來說具足色身，即非具足色身，是名具足色身。」「須菩提！於意云何？如來可以具足諸相見不？」「不也，世尊！如來不應以具足諸相見。何以故？如來說諸相具足，即非具足，是名諸相具足。」</p>
+</div></details>
+<details class="k-node" id="k-448"><summary>辛四 法音遍滿</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751c11–751c15</p>
+<p class="k-chapter" data-chapter="21" id="chapter-21">第 21 分 · 非說所說</p>
+<p class="reading k-reading">「須菩提！汝勿謂如來作是念：我當有所說法。莫作是念！何以故？若人言如來有所說法，即為謗佛，不能解我所說故。須菩提！說法者，無法可說，是名說法。」</p>
+</div></details>
+<details class="k-node" id="k-455"><summary>辛五 信眾殊勝</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751c16–751c19</p>
+<p class="k-chapter" data-chapter="21">第 21 分 · 非說所說</p>
+<p class="reading k-reading">爾時，慧命須菩提白佛言：「世尊！頗有眾生於未來世聞說是法，生信心不？」佛言：「須菩提！彼非眾生，非不眾生。何以故？須菩提！眾生眾生者，如來說非眾生，是名眾生。」</p>
+</div></details>
+<details class="k-node" id="k-461"><summary>辛六 正覺圓成</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751c20–751c28</p>
+<p class="k-chapter" data-chapter="22" id="chapter-22">第 22 分 · 無法可得</p>
+<p class="reading k-reading">須菩提白佛言：「世尊！佛得阿耨多羅三藐三菩提，為無所得耶？」佛言：「如是！如是！須菩提！我於阿耨多羅三藐三菩提，乃至無有少法可得，是名阿耨多羅三藐三菩提。</p>
+<p class="k-chapter" data-chapter="23" id="chapter-23">第 23 分 · 淨心行善</p>
+<p class="reading k-reading">復次，須菩提！是法平等，無有高下，是名阿耨多羅三藐三菩提。以無我、無人、無眾生、無壽者，修一切善法，則得阿耨多羅三藐三菩提。須菩提！所言善法者，如來說即非善法，是名善法。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-466"><summary>庚二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 751c29–752a04</p>
+<p class="k-chapter" data-chapter="24" id="chapter-24">第 24 分 · 福智無比</p>
+<p class="reading k-reading">須菩提！若三千大千世界中所有諸須彌山王，如是等七寶聚，有人持用布施。若人以此《般若波羅蜜經》乃至四句偈等，受持、讀誦，為他人說，於前福德百分不及一，百千萬億分乃至算數譬喻所不能及。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-472"><summary>己二 示現化身事業</summary><div class="k-content">
+<details class="k-node" id="k-473"><summary>庚一 化凡夫眾</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752a05–752a10</p>
+<p class="k-chapter" data-chapter="25" id="chapter-25">第 25 分 · 化無所化</p>
+<p class="reading k-reading">須菩提！於意云何？汝等勿謂如來作是念：我當度眾生。須菩提！莫作是念！何以故？實無有眾生如來度者。若有眾生如來度者，如來則有我、人、眾生、壽者。須菩提！如來說有我者，則非有我，而凡夫之人以為有我。須菩提！凡夫者，如來說即非凡夫。</p>
+</div></details>
+<details class="k-node" id="k-481"><summary>庚二 現化身相</summary><div class="k-content">
+<details class="k-node" id="k-483"><summary>辛一 相好</summary><div class="k-content">
+<details class="k-node" id="k-484"><summary>壬一 正說</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752a11–752a25</p>
+<p class="k-chapter" data-chapter="26" id="chapter-26">第 26 分 · 法身非相</p>
+<p class="reading k-reading">須菩提！於意云何？可以三十二相觀如來不？」須菩提言：「如是！如是！以三十二相觀如來。」佛言：「須菩提！若以三十二相觀如來者，轉輪聖王則是如來。」須菩提白佛言：「世尊！如我解佛所說義，不應以三十二相觀如來。」爾時，世尊而說偈言：「若以色見我，以音聲求我，是人行邪道，不能見如來。」</p>
+<p class="k-chapter" data-chapter="27" id="chapter-27">第 27 分 · 無斷無滅</p>
+<p class="reading k-reading">「須菩提！汝若作是念：如來不以具足相故得阿耨多羅三藐三菩提。須菩提！莫作是念：如來不以具足相故得阿耨多羅三藐三菩提！須菩提！汝若作是念，發阿耨多羅三藐三菩提心者，說諸法斷滅。莫作是念！何以故？發阿耨多羅三藐三菩提心者，於法不說斷滅相。</p>
+</div></details>
+<details class="k-node" id="k-489"><summary>壬二 校德</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752a25–752b02</p>
+<p class="k-chapter" data-chapter="28" id="chapter-28">第 28 分 · 不受不貪</p>
+<p class="reading k-reading">須菩提！若菩薩以滿恆河沙等世界七寶持用布施，若復有人知一切法無我得成於忍，此菩薩勝前菩薩所得功德。何以故？須菩提！以諸菩薩不受福德故。」須菩提白佛言：「世尊！云何菩薩不受福德？」「須菩提！菩薩所作福德，不應貪著，是故說不受福德。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-494"><summary>辛二 威儀</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b03–752b05</p>
+<p class="k-chapter" data-chapter="29" id="chapter-29">第 29 分 · 威儀寂靜</p>
+<p class="reading k-reading">須菩提！若有人言如來若來、若去、若坐、若臥，是人不解我所說義。何以故？如來者，無所從來，亦無所去，故名如來。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-500"><summary>庚三 處大千界</summary><div class="k-content">
+<details class="k-node" id="k-501"><summary>辛一 微塵</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b06–752b10</p>
+<p class="k-chapter" data-chapter="30" id="chapter-30">第 30 分 · 一合相理</p>
+<p class="reading k-reading">須菩提！若善男子善女人，以三千大千世界碎為微塵，於意云何？是微塵眾寧為多不？」須菩提言：「甚多，世尊！何以故？若是微塵眾實有者，佛則不說是微塵眾。所以者何？佛說微塵眾，即非微塵眾，是名微塵眾。</p>
+</div></details>
+<details class="k-node" id="k-505"><summary>辛二 世界</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b10–752b14</p>
+<p class="k-chapter" data-chapter="30">第 30 分 · 一合相理</p>
+<p class="reading k-reading">世尊！如來所說三千大千世界，即非世界，是名世界。何以故？若世界實有者，則是一合相。如來說一合相，則非一合相，是名一合相。」「須菩提！一合相者，則是不可說，但凡夫之人貪著其事。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-510"><summary>庚四 說無我教</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b15–752b20</p>
+<p class="k-chapter" data-chapter="31" id="chapter-31">第 31 分 · 知見不生</p>
+<p class="reading k-reading">須菩提！若人言佛說我見、人見、眾生見、壽者見。須菩提！於意云何？是人解我所說義不？」「不也，世尊！是人不解如來所說義。何以故？世尊說我見、人見、眾生見、壽者見，即非我見、人見、眾生見、壽者見，是名我見、人見、眾生見、壽者見。」</p>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-514"><summary>丙二 勸發奉持 <span class="code">C-22</span></summary><div class="k-content">
+<details class="k-node" id="k-516"><summary>丁一 別明離相</summary><div class="k-content">
+<details class="k-node" id="k-518"><summary>戊一 應如是知見信解</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b20–752b23</p>
+<p class="k-chapter" data-chapter="31">第 31 分 · 知見不生</p>
+<p class="reading k-reading">「須菩提！發阿耨多羅三藐三菩提心者，於一切法，應如是知，如是見，如是信解，不生法相。須菩提！所言法相者，如來說即非法相，是名法相。</p>
+</div></details>
+<details class="k-node" id="k-523"><summary>戊二 應如是受持誦說</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b23–752b27</p>
+<p class="k-chapter" data-chapter="32" id="chapter-32">第 32 分 · 應化非真</p>
+<p class="reading k-reading">須菩提！若有人以滿無量阿僧祇世界七寶持用布施，若有善男子善女人發菩提心者，持於此經，乃至四句偈等，受持、讀誦，為人演說，其福勝彼。云何為人演說，不取於相，如如不動。</p>
+</div></details>
+</div></details>
+<details class="k-node" id="k-527"><summary>丁二 結示正觀</summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b27–752b29</p>
+<p class="k-chapter" data-chapter="32">第 32 分 · 應化非真</p>
+<p class="reading k-reading">何以故？一切有為法，如夢、幻、泡、影，如露亦如電，應作如是觀！」</p>
+</div></details>
+</div></details>
+</div></details>
+</div></details>
+<details class="k-node" id="k-535"><summary>甲三 流通分 <span class="code">C-27</span></summary><div class="k-content"><p class="k-locator">大正藏對讀 · T08 No. 235 · 752b30–752c02</p>
+<p class="k-chapter" data-chapter="32">第 32 分 · 應化非真</p>
+<p class="reading k-reading">佛說是經已，長老須菩提，及諸比丘、比丘尼、優婆塞、優婆夷，一切世間天、人、阿修羅，聞佛所說，皆大歡喜，信受奉行。</p>
+</div></details>
+  </section>
+
+  <section aria-labelledby="k-audit-title" id="k-audit">
+    <h2 id="k-audit-title">對齊與驗證</h2>
+    <p>先按上傳的科判圖核對層級與標號，再從印順導師《般若經講記》取出經文。最後用 CBETA 大正藏 T08 No. 235 電子版逐字比對，排除標點與空格，標出各段對應行號和用字差異。</p>
+    <p>範圍從「如是我聞」到「信受奉行」。本站保留《講記》引文的用字，科判節點下方的行號用於回查大正藏底本。</p>
+    <ul class="refs">
+      <li><a href="./diamond-sutra-outline.pdf">上傳的科判原圖</a></li>
+      <li><a href="https://tripitaka2.zensoul.org/Y/Y0001/2">《般若經講記》卷二</a></li>
+      <li><a href="https://dlbs.liberal.ntu.edu.tw/BDLM/sutra/html/T08/T08n0235.htm">CBETA 大正藏 T08 No. 235 電子版（臺大佛學數位圖書館）</a></li>
+    </ul>
+    <details class="appendix">
+      <summary>查看 32 分起句與對照行號</summary>
+      <div class="k-table-wrap" tabindex="0" role="region" aria-label="三十二分驗證表">
+        <table><thead><tr><th scope="col">傳統分次</th><th scope="col">所在科判</th><th scope="col">經文起句</th><th scope="col">大正藏起行</th></tr></thead>
+        <tbody><tr><th scope="row"><a href="#chapter-1">第 1 分 · 法會因由</a></th><td>序分 › 證信序</td><td>如是我聞：一時，佛在舍衛國祇樹給孤獨園…</td><td>748c20</td></tr><tr><th scope="row"><a href="#chapter-2">第 2 分 · 善現啟請</a></th><td>開示次第 › 請說</td><td>時，長老須菩提，在大眾中，即從座起，偏袒…</td><td>748c24</td></tr><tr><th scope="row"><a href="#chapter-3">第 3 分 · 大乘正宗</a></th><td>正說 › 發心菩提</td><td>佛告須菩提：「諸菩薩摩訶薩應如是降伏其心…</td><td>749a05</td></tr><tr><th scope="row"><a href="#chapter-4">第 4 分 · 妙行無住</a></th><td>正說 › 伏心菩提</td><td>復次，須菩提！菩薩於法應無所住行於布施…</td><td>749a12</td></tr><tr><th scope="row"><a href="#chapter-5">第 5 分 · 如理實見</a></th><td>明心菩提 › 法身離相而見</td><td>須菩提！於意云何？可以身相見如來不？」「…</td><td>749a21</td></tr><tr><th scope="row"><a href="#chapter-6">第 6 分 · 正信希有</a></th><td>眾生久行乃信 › 問</td><td>須菩提白佛言：「世尊！頗有眾生得聞如是言…</td><td>749a26</td></tr><tr><th scope="row"><a href="#chapter-7">第 7 分 · 無得無說</a></th><td>舉如來為證 › 正說</td><td>須菩提！於意云何？如來得阿耨多羅三藐三菩…</td><td>749b12</td></tr><tr><th scope="row"><a href="#chapter-8">第 8 分 · 依法出生</a></th><td>舉如來為證 › 校德</td><td>須菩提！於意云何？若人滿三千大千世界七寶…</td><td>749b18</td></tr><tr><th scope="row"><a href="#chapter-9">第 9 分 · 一相無相</a></th><td>賢聖無為同證 › 舉聲聞為證</td><td>須菩提！於意云何？須陀洹能作是念：我得須…</td><td>749b26</td></tr><tr><th scope="row"><a href="#chapter-10">第 10 分 · 莊嚴淨土</a></th><td>正說 › 得無生忍</td><td>佛告須菩提：「於意云何？如來昔在然燈佛所…</td><td>749c16</td></tr><tr><th scope="row"><a href="#chapter-11">第 11 分 · 無為福勝</a></th><td>舉菩薩為證 › 校德</td><td>須菩提！如恆河中所有沙數，如是沙等恆河…</td><td>749c25</td></tr><tr><th scope="row"><a href="#chapter-12">第 12 分 · 尊重正教</a></th><td>舉菩薩為證 › 校德</td><td>復次，須菩提！隨說是經乃至四句偈等，當知…</td><td>750a06</td></tr><tr><th scope="row"><a href="#chapter-13">第 13 分 · 如法受持</a></th><td>示奉持行相 › 問</td><td>爾時，須菩提白佛言：「世尊！當何名此經…</td><td>750a11</td></tr><tr><th scope="row"><a href="#chapter-14">第 14 分 · 離相寂滅</a></th><td>空生歎法美人 › 深法難遇歎</td><td>爾時，須菩提聞說是經，深解義趣，涕淚悲泣…</td><td>750a27</td></tr><tr><th scope="row"><a href="#chapter-15">第 15 分 · 持經功德</a></th><td>略歎勸行 › 校德</td><td>須菩提！若有善男子善女人，初日分以恆河沙…</td><td>750c07</td></tr><tr><th scope="row"><a href="#chapter-16">第 16 分 · 能淨業障</a></th><td>正說 › 轉滅罪業勝</td><td>復次，須菩提！善男子善女人，受持、讀誦此…</td><td>750c24</td></tr><tr><th scope="row"><a href="#chapter-17">第 17 分 · 究竟無我</a></th><td>開示次第 › 請問</td><td>爾時，須菩提白佛言：「世尊！善男子善女人…</td><td>751a08</td></tr><tr><th scope="row"><a href="#chapter-18">第 18 分 · 一體同觀</a></th><td>正說 › 知見圓明</td><td>須菩提！於意云何？如來有肉眼不？」「如是…</td><td>751b13</td></tr><tr><th scope="row"><a href="#chapter-19">第 19 分 · 法界通化</a></th><td>正說 › 福德眾多</td><td>須菩提！於意云何？若有人滿三千大千世界七…</td><td>751b29</td></tr><tr><th scope="row"><a href="#chapter-20">第 20 分 · 離色離相</a></th><td>正說 › 身相具足</td><td>須菩提！於意云何？佛可以具足色身見不？」…</td><td>751c05</td></tr><tr><th scope="row"><a href="#chapter-21">第 21 分 · 非說所說</a></th><td>正說 › 法音遍滿</td><td>須菩提！汝勿謂如來作是念：我當有所說法…</td><td>751c11</td></tr><tr><th scope="row"><a href="#chapter-22">第 22 分 · 無法可得</a></th><td>正說 › 正覺圓成</td><td>須菩提白佛言：「世尊！佛得阿耨多羅三藐三…</td><td>751c20</td></tr><tr><th scope="row"><a href="#chapter-23">第 23 分 · 淨心行善</a></th><td>正說 › 正覺圓成</td><td>復次，須菩提！是法平等，無有高下，是名阿…</td><td>751c24</td></tr><tr><th scope="row"><a href="#chapter-24">第 24 分 · 福智無比</a></th><td>圓證法身功德 › 校德</td><td>須菩提！若三千大千世界中所有諸須彌山王…</td><td>751c29</td></tr><tr><th scope="row"><a href="#chapter-25">第 25 分 · 化無所化</a></th><td>示現化身事業 › 化凡夫眾</td><td>須菩提！於意云何？汝等勿謂如來作是念：我…</td><td>752a05</td></tr><tr><th scope="row"><a href="#chapter-26">第 26 分 · 法身非相</a></th><td>相好 › 正說</td><td>須菩提！於意云何？可以三十二相觀如來不…</td><td>752a11</td></tr><tr><th scope="row"><a href="#chapter-27">第 27 分 · 無斷無滅</a></th><td>相好 › 正說</td><td>須菩提！汝若作是念：如來不以具足相故得阿…</td><td>752a19</td></tr><tr><th scope="row"><a href="#chapter-28">第 28 分 · 不受不貪</a></th><td>相好 › 校德</td><td>須菩提！若菩薩以滿恆河沙等世界七寶持用布…</td><td>752a25</td></tr><tr><th scope="row"><a href="#chapter-29">第 29 分 · 威儀寂靜</a></th><td>現化身相 › 威儀</td><td>須菩提！若有人言如來若來、若去、若坐、若…</td><td>752b03</td></tr><tr><th scope="row"><a href="#chapter-30">第 30 分 · 一合相理</a></th><td>處大千界 › 微塵</td><td>須菩提！若善男子善女人，以三千大千世界碎…</td><td>752b06</td></tr><tr><th scope="row"><a href="#chapter-31">第 31 分 · 知見不生</a></th><td>示現化身事業 › 說無我教</td><td>須菩提！若人言佛說我見、人見、眾生見、壽…</td><td>752b15</td></tr><tr><th scope="row"><a href="#chapter-32">第 32 分 · 應化非真</a></th><td>別明離相 › 應如是受持誦說</td><td>須菩提！若有人以滿無量阿僧祇世界七寶持用…</td><td>752b23</td></tr></tbody></table>
+      </div>
+    </details>
+    <details class="appendix">
+      <summary>查看逐字比對的 35 處差異</summary>
+      <p>下表呈現兩份電子文本在比對時的字詞差異，含異體字與增減字。同一科判中重複出現的差異合併列出。</p>
+      <div class="k-table-wrap" tabindex="0" role="region" aria-label="經文用字差異表">
+        <table><thead><tr><th scope="col">所在科判</th><th scope="col">講記引文</th><th scope="col">大正藏底本</th><th scope="col">大正藏行號</th></tr></thead>
+        <tbody><tr><th scope="row"><a href="#k-116">正說 › 發心菩提</a></th><td>溼</td><td>濕</td><td>749a07</td></tr><tr><th scope="row"><a href="#k-204">賢聖無為同證 › 舉聲聞為證</a></th><td>不</td><td>〔無此字〕</td><td>749c06</td></tr><tr><th scope="row"><a href="#k-219">正說 › 得無生忍</a></th><td>不也</td><td>〔無此字〕</td><td>749c17</td></tr><tr><th scope="row"><a href="#k-238">舉菩薩為證 › 校德</a></th><td>恆</td><td>恒</td><td>749c26、749c27、749c28、750a01</td></tr><tr><th scope="row"><a href="#k-284">答 › 校德</a></th><td>恆</td><td>恒</td><td>750a24</td></tr><tr><th scope="row"><a href="#k-336">略歎勸行 › 校德</a></th><td>恆</td><td>恒</td><td>750c07、750c08、750c09</td></tr><tr><th scope="row"><a href="#k-385">明心菩提 › 真發菩提心</a></th><td>心</td><td>〔無此字〕</td><td>751a11、751a16</td></tr><tr><th scope="row"><a href="#k-390">明心菩提 › 分證菩提果</a></th><td>授</td><td>受</td><td>751a23、751a25</td></tr><tr><th scope="row"><a href="#k-426">正說 › 知見圓明</a></th><td>如恆</td><td>恒</td><td>751b20</td></tr><tr><th scope="row"><a href="#k-426">正說 › 知見圓明</a></th><td>恆</td><td>恒</td><td>751b22</td></tr><tr><th scope="row"><a href="#k-426">正說 › 知見圓明</a></th><td>沙</td><td>〔無此字〕</td><td>751b23</td></tr><tr><th scope="row"><a href="#k-426">正說 › 知見圓明</a></th><td>恆</td><td>恒</td><td>751b23</td></tr><tr><th scope="row"><a href="#k-461">正說 › 正覺圓成</a></th><td>佛言</td><td>〔無此字〕</td><td>751c21</td></tr><tr><th scope="row"><a href="#k-461">正說 › 正覺圓成</a></th><td>即</td><td>〔無此字〕</td><td>751c27</td></tr><tr><th scope="row"><a href="#k-473">示現化身事業 › 化凡夫眾</a></th><td>即</td><td>則</td><td>752a10</td></tr><tr><th scope="row"><a href="#k-484">相好 › 正說</a></th><td>汝</td><td>〔無此字〕</td><td>752a22</td></tr><tr><th scope="row"><a href="#k-484">相好 › 正說</a></th><td>心</td><td>〔無此字〕</td><td>752a23</td></tr><tr><th scope="row"><a href="#k-484">相好 › 正說</a></th><td>〔無此字〕</td><td>相</td><td>752a23</td></tr><tr><th scope="row"><a href="#k-489">相好 › 校德</a></th><td>恆</td><td>恒</td><td>752a25</td></tr><tr><th scope="row"><a href="#k-489">相好 › 校德</a></th><td>持用</td><td>〔無此字〕</td><td>752a26</td></tr><tr><th scope="row"><a href="#k-489">相好 › 校德</a></th><td>何以故</td><td>〔無此字〕</td><td>752a28</td></tr><tr><th scope="row"><a href="#k-501">處大千界 › 微塵</a></th><td>須菩提言</td><td>〔無此字〕</td><td>752b08</td></tr><tr><th scope="row"><a href="#k-501">處大千界 › 微塵</a></th><td>即</td><td>則</td><td>752b10</td></tr><tr><th scope="row"><a href="#k-505">處大千界 › 世界</a></th><td>即</td><td>則</td><td>752b11</td></tr><tr><th scope="row"><a href="#k-510">示現化身事業 › 說無我教</a></th><td>不也</td><td>〔無此字〕</td><td>752b17</td></tr><tr><th scope="row"><a href="#k-523">別明離相 › 應如是受持誦說</a></th><td>提</td><td>薩</td><td>752b25</td></tr></tbody></table>
+      </div>
+    </details>
+  </section>
+  <section aria-labelledby="k-sources">
+    <h2 id="k-sources">來源</h2>
+    <ul class="refs">
+      <li><a href="./diamond-sutra-outline.pdf">查看上傳的科判原圖 PDF</a>。A、B、C 編號沿用圖上的標記。</li>
+      <li><a href="https://tripitaka2.zensoul.org/Y/Y0001/2">印順導師《般若經講記》〈金剛般若波羅蜜經講記〉</a>。逐段經文依講記所引的鳩摩羅什譯文，保留該版用字與標點。</li>
+      <li><a href="https://cbetaonline.dila.edu.tw/zh/X0459">傳統三十二分的分次對照</a>。第二分的「啟請」沿用本站筆記用字，參照本亦作「起請」。</li>
+    </ul>
+  </section>
+</main>
+<footer>工具製作：Tally.C</footer>
+<nav class="bottom-toolbar" aria-label="頁面工具">
+  <a href="./">首頁</a><a href="./journal.html#notebook-search">搜尋</a><button type="button" class="quiet" data-open-reading aria-haspopup="dialog" aria-label="閱讀設定">設定</button>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded",() => {
+  const chapterSelect = document.getElementById("chapter-select");
+  const outline = document.getElementById("kepan-overview");
+  const incomingCard = Number(new URLSearchParams(location.search).get("card"));
+  const studyPanels = new Map();
+  const nodes = [...document.querySelectorAll(".k-node")];
+  const initiallyOpen = new Set(nodes.filter(node => node.open));
+
+  function showOverview() {
+    for (const node of nodes) node.open = initiallyOpen.has(node);
+    chapterSelect.value = "";
+    chapterSelect.focus({preventScroll:true});
+    outline.scrollIntoView();
+  }
+
+  function chapterLink(text,href,action) {
+    const link = document.createElement("a");
+    link.className = "chapter-note-link";
+    if (action) link.dataset.chapterAction = action;
+    link.href = href;
+    link.textContent = text;
+    return link;
+  }
+
+  const chapterPassageCounts = new Map();
+  for (const marker of document.querySelectorAll(".k-chapter")) {
+    const number = Number(marker.dataset.chapter);
+    const count = (chapterPassageCounts.get(number) || 0) + 1;
+    chapterPassageCounts.set(number,count);
+    if (!marker.id) marker.id = "chapter-" + number + "-passage-" + count;
+  }
+
+  for (const chapter of document.querySelectorAll(".k-chapter")) {
+    const number = Number(chapter.dataset.chapter);
+    const actions = document.createElement("div");
+    actions.className = "chapter-actions";
+    actions.append(chapterLink("修行記錄","./journal.html?chapter=" + number + "#journal","practice"));
+    const study = chapterStudy[number - 1];
+    const sameCard = Number.isInteger(incomingCard) && incomingCard >= study.firstCard &&
+      incomingCard <= study.lastCard;
+    const reciteUrl = "./recitation.html?card=" + (sameCard ? incomingCard : study.firstCard) + "#practice";
+    actions.prepend(chapterLink("背誦",reciteUrl,"recite"));
+    actions.append(chapterLink("回科判總覽","#kepan-overview"));
+    const verse = chapter.nextElementSibling;
+    verse.after(actions);
+
+    if (chapter.id !== "chapter-" + number) continue;
+    const panel = document.createElement("details");
+    panel.className = "chapter-study";
+    const summary = document.createElement("summary");
+    summary.textContent = "本分法義與梵文";
+    panel.append(summary);
+    panel.addEventListener("toggle",function showHelp() {
+      if (!panel.open) return;
+      panel.removeEventListener("toggle",showHelp);
+      summary.after(createChapterToolHint([
+        ["有什麼", "本分的法義導讀與梵文詞彙。"],
+        ["怎麼看", "先讀法義，再按需要對照詞彙。點標題可收合。"],
+        ["如何下手", "從下方「法義導讀」第一段讀起。"],
+        ["工具助益", "先抓住本分重點，遇到關鍵名相時也有詞彙可查。"],
+      ],"查看讀經說明"));
+    });
+    for (const [title,text] of [["法義導讀",study.desc],["梵文詞彙",study.sanskrit]]) {
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      const content = document.createElement("p");
+      content.className = title === "梵文詞彙" ? "reading chapter-sanskrit" : "reading";
+      content.textContent = text;
+      panel.append(heading,content);
+    }
+    actions.after(panel, createReadingGuides(number));
+    if (sameCard) studyPanels.set(String(number),panel);
+  }
+
+  function revealTarget() {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target === outline) {
+      showOverview();
+      return;
+    }
+    if (!target || !target.closest(".k-node")) return;
+    const chapter = target.dataset.chapter;
+    const matches = chapter ? document.querySelectorAll(`[data-chapter="${chapter}"]`) : [target];
+    for (const match of matches) {
+      for (let node = match; node; node = node.parentElement) {
+        if (node instanceof HTMLDetailsElement) node.open = true;
+      }
+    }
+    if (chapter) {
+      chapterSelect.value = "chapter-" + chapter;
+      const study = studyPanels.get(chapter);
+      if (study) study.open = true;
+      try { localStorage.setItem("prajna-last-chapter",chapter); } catch {}
+    } else {
+      chapterSelect.value = "";
+      }
+    const focusTarget = target instanceof HTMLDetailsElement ? target.querySelector("summary") : target;
+    if (focusTarget !== target || !focusTarget.hasAttribute("tabindex")) focusTarget.tabIndex = -1;
+    focusTarget.focus({ preventScroll: true });
+    target.scrollIntoView();
+  }
+  chapterSelect.addEventListener("change", event => {
+    const id = event.currentTarget.value;
+    if (!id) {
+      location.hash = outline.id;
+      return;
+    }
+    if (location.hash === "#" + id) revealTarget();
+    else location.hash = id;
+  });
+  window.addEventListener("hashchange", revealTarget);
+  revealTarget();
+});
+</script>
+  <dialog class="reading-panel reading-sheet" id="reading-settings" data-reading-settings aria-labelledby="reading-settings-title">
+    <form method="dialog" class="dialog-header">
+      <h2 id="reading-settings-title">閱讀設定</h2><button class="quiet" type="submit" autofocus>關閉</button>
+    </form>
+    <div class="reading-preview" data-reading-preview>
+      <p class="reading-preview-label">即時預覽 ·《金剛經》第三十二分</p>
+      <p class="reading">一切有為法，如夢、幻、泡、影。</p>
+      <p class="reading">如露亦如電，應作如是觀。</p>
+    </div>
+  </dialog>
+</body>
+</html>

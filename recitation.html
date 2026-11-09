@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="prajna-release" content="5b42c714e0e22949b888">
+<meta name="theme-color" content="#e8dcc0">
+<title>誦｜金剛經修行工具</title>
+<link rel="icon" href="./icons/prajna-192.png?v=2">
+<link rel="stylesheet" href="./style.css?v=39">
+<link rel="stylesheet" href="./recitation.css?v=5">
+<script src="./reading-settings.js?v=12" defer></script>
+<script src="./site-update.js?v=6" defer></script>
+<script src="./recitation-data.js?v=2" defer></script>
+<script src="./recitation.js?v=6" defer></script>
+</head>
+<body class="recitation">
+<header class="mast" id="page-top">
+  <a class="brand" href="./"><span class="seal tool-seal" aria-hidden="true">金剛<br>般若</span> 金剛經修行工具</a>
+  <span id="site-update-status" class="site-update-status" role="status"></span>
+</header>
+<main>
+  <header class="hero">
+    <p class="eyebrow">金剛般若波羅蜜經</p>
+    <h1>誦</h1>
+    <p class="subtitle">江味農居士校定本 · 65 張經文卡</p>
+  </header>
+  <aside class="tool-start" aria-label="快速上手">
+    <p class="tool-start-title">快速上手</p>
+    <dl>
+      <div><dt>有什麼</dt><dd>分次經文卡、遮蔽、挖空與背誦進度。</dd></div>
+      <div><dt>怎麼用</dt><dd>整段默背用「遮蔽」，想練幾個字用「挖空」。完成後勾選「已背誦」。</dd></div>
+      <div><dt>如何下手</dt><dd>在「跳到分次」選一分，先讀第一張經文卡。</dd></div>
+      <div><dt>工具助益</dt><dd>可分小段練習，並從進度找到還要複習的經文卡。</dd></div>
+    </dl>
+    <a href="./guide.html#guide-recite">查看完整使用說明</a>
+  </aside>
+  <details class="appendix tool-help" id="recitation-guide">
+    <summary>誦的使用說明</summary>
+      <figure class="guide-diagram">
+        <figcaption>操作圖說</figcaption>
+        <ol><li>跳到分次</li><li>遮蔽或挖空</li><li>已背誦</li></ol>
+      </figure>
+    <figure class="guide-diagram">
+      <figcaption>同一張經文卡的三種畫面</figcaption>
+      <ol class="guide-samples">
+        <li><strong>讀誦</strong><span>如是我聞。一時……</span></li>
+        <li><strong>遮蔽</strong><span class="guide-control">顯示經文</span></li>
+        <li><strong>挖空</strong><span>如是我聞。<span class="guide-control">□</span>時……</span></li>
+      </ol>
+    </figure>
+    <p>誦讀採江味農居士校定本，分成 65 張經文卡。選「跳到分次」會到該分第一張。長分拆成多張，請用「上一卡／下一卡」繼續。</p>
+    <p>整段默背用「遮蔽」，背完點「顯示經文」。只練部分字用「挖空」，點方格核對答案。遇到需要查經義的地方，點「讀本分」，想記下心得則點「修行記錄」。</p>
+    <p>勾選「已背誦」後，進度條按卡數計算，位置和進度存在目前的瀏覽器。換裝置時開「轉移進度」，用 QR 碼或連結開啟另一台裝置，也可貼上同步碼再合併。</p>
+    <p>電腦快捷鍵可用左右方向鍵換卡、空白鍵切換遮蔽、C 切換挖空、M 標記已背誦。</p>
+    <p><a href="#division-select">開始練習</a></p>
+    <p><a href="./guide.html#guide-recite">在「使用說明」查看完整步驟</a></p>
+  </details>
+  <section class="recitation-progress" aria-label="背誦進度">
+    <p id="recitation-progress-text" role="status"></p>
+    <progress id="recitation-progress" aria-label="背誦進度" value="0"></progress>
+  </section>
+  <label for="division-select">跳到分次</label>
+  <select id="division-select"></select>
+  <article class="recitation-card" id="practice" aria-labelledby="card-division">
+    <div class="recitation-card-header">
+      <h2 id="card-division"></h2>
+      <p id="card-number" role="status"></p>
+    </div>
+    <p id="card-text" class="reading"></p>
+    <button type="button" class="quiet" id="reveal-card" hidden>顯示經文</button>
+    <footer class="recitation-card-footer">
+      <span id="card-count"></span>
+      <label><input id="card-memorized" type="checkbox"> 已背誦</label>
+    </footer>
+  </article>
+  <div class="recitation-navigation">
+    <button type="button" class="quiet" id="previous-card">上一卡</button>
+    <button type="button" id="next-card">下一卡</button>
+  </div>
+  <div class="recitation-actions" aria-label="背誦工具">
+    <button type="button" class="quiet" id="mode-hide" aria-pressed="false">遮蔽</button>
+    <button type="button" class="quiet" id="mode-cloze" aria-pressed="false">挖空</button>
+    <a href="./kepan.html" id="read-division">讀本分</a>
+    <a href="./journal.html#journal" id="note-division">修行記錄</a>
+    <button type="button" class="quiet" id="open-sync">轉移進度</button>
+  </div>
+  <p id="recitation-feedback" class="meta" role="status"></p>
+  <dialog id="sync-dialog" aria-labelledby="sync-title">
+    <form method="dialog" class="recitation-dialog-header"><h2 id="sync-title">轉移背誦進度</h2><button type="submit" class="quiet">關閉</button></form>
+    <p>可用另一台裝置掃碼、開啟連結，或貼上同步碼合併進度。</p>
+    <div id="sync-export">
+      <div id="sync-qr" aria-label="進度轉移二維碼"></div>
+      <label for="sync-link">轉移連結</label>
+      <div class="recitation-input-row"><input id="sync-link" readonly><button type="button" class="quiet" id="copy-link">複製連結</button></div>
+      <label for="sync-code">此裝置同步碼</label>
+      <div class="recitation-input-row"><input id="sync-code" readonly><button type="button" class="quiet" id="copy-code">複製同步碼</button></div>
+    </div>
+    <form id="sync-import">
+      <label for="import-code">貼上要匯入的同步碼</label>
+      <div class="recitation-input-row"><input id="import-code" placeholder="例如 1,2,5"><button type="submit">匯入並合併</button></div>
+    </form>
+    <p id="sync-feedback" class="meta" role="status"></p>
+  </dialog>
+  <dialog id="merge-dialog" aria-labelledby="merge-title">
+    <form method="dialog">
+      <h2 id="merge-title">合併背誦進度</h2>
+      <p id="merge-description"></p>
+      <div class="recitation-actions"><button class="quiet" value="cancel">取消</button><button value="merge">合併進度</button></div>
+    </form>
+  </dialog>
+</main>
+<footer>工具製作：Tally.C</footer>
+<nav class="bottom-toolbar" aria-label="頁面工具">
+  <a href="./">首頁</a><a href="./journal.html#notebook-search">搜尋</a><button type="button" class="quiet" data-open-reading aria-haspopup="dialog" aria-label="閱讀設定">設定</button>
+</nav>
+  <dialog class="reading-panel reading-sheet" id="reading-settings" data-reading-settings aria-labelledby="reading-settings-title">
+    <form method="dialog" class="dialog-header">
+      <h2 id="reading-settings-title">閱讀設定</h2><button class="quiet" type="submit" autofocus>關閉</button>
+    </form>
+    <div class="reading-preview" data-reading-preview>
+      <p class="reading-preview-label">即時預覽 ·《金剛經》第三十二分</p>
+      <p class="reading">一切有為法，如夢、幻、泡、影。</p>
+      <p class="reading">如露亦如電，應作如是觀。</p>
+    </div>
+  </dialog>
+</body>
+</html>

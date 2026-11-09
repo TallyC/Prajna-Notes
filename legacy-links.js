@@ -1,0 +1,112 @@
+"use strict";
+
+(() => {
+  const url = new URL(location.href);
+  const anchor = url.hash.slice(1);
+  const pages = {
+  "journal": "journal",
+  "journal-title": "journal",
+  "note-form": "journal",
+  "note-topic": "journal",
+  "note-source": "journal",
+  "note-reference": "journal",
+  "note-text": "journal",
+  "save-note": "journal",
+  "cancel-edit": "journal",
+  "note-message": "journal",
+  "note-filter": "journal",
+  "note-filter-empty": "journal",
+  "note-list": "journal",
+  "search-personal-notes": "journal",
+  "export": "journal",
+  "import": "journal",
+  "import-file": "journal",
+  "notebook-search": "journal",
+  "search-title": "journal",
+  "search-form": "journal",
+  "search-query": "journal",
+  "search-scope": "journal",
+  "search-status": "journal",
+  "search-results": "journal",
+  "diamond-quotes": "artwork",
+  "diamond-quotes-title": "artwork",
+  "scripture-gallery": "artwork",
+  "wallpapers": "wallpapers",
+  "wallpapers-title": "wallpapers",
+  "wallpaper-gallery": "wallpapers",
+  "cards": "artwork",
+  "cards-title": "artwork",
+  "gallery": "artwork",
+  "tool-guide": "guide",
+  "tool-guide-title": "guide",
+  "install-guide": "guide",
+  "reading-references": "references",
+  "reading-references-title": "references",
+  "downloads": "references",
+  "lecture-reference": "lecture",
+  "lecture-reference-title": "lecture",
+  "lecture": "lecture",
+  "lecture-title": "lecture",
+  "lecture-overview": "lecture",
+  "afternoon": "lecture",
+  "afternoon-reading": "lecture",
+  "sutra-01": "lecture",
+  "sutra-02": "lecture",
+  "sutra-03": "lecture",
+  "related-notes-title": "lecture",
+  "afternoon-related": "lecture",
+  "nov8": "lecture",
+  "nov8-title": "lecture",
+  "nov8-am": "lecture",
+  "nov8-am-title": "lecture",
+  "nov8-habits": "lecture",
+  "nov8-five-stages": "lecture",
+  "nov8-seeing-dharma": "lecture",
+  "nov8-non-abiding": "lecture",
+  "nov8-pm": "lecture",
+  "nov8-pm-title": "lecture",
+  "practice-merit-wisdom": "lecture",
+  "bodhi-vow-notes": "lecture",
+  "mingxin-notes": "lecture",
+  "chudao-notes": "lecture",
+  "killing-example": "lecture",
+  "bodhi-tree-source": "lecture",
+  "shared-vow": "lecture",
+  "water-moon-quote": "lecture",
+  "closing-verse": "lecture",
+  "practice-in-present": "lecture",
+  "slides-pending": "lecture",
+  "write-nov8-pm": "lecture",
+  "personal-nov8-pm": "lecture",
+  "write-nov8": "lecture",
+  "personal-nov8": "lecture",
+  "topics": "lecture",
+  "topics-title": "lecture",
+  "load-message": "lecture",
+  "tree": "lecture",
+  "practice-one-place": "lecture",
+  "references": "lecture",
+  "checks": "lecture",
+  "origin": "lecture",
+  "non-abiding": "lecture",
+  "giving": "lecture",
+  "practice": "lecture",
+  "bodhi": "lecture",
+  "tools": "lecture",
+  "illusion": "lecture",
+  "title": "lecture",
+  "reading-settings": "kepan"
+};
+  const page = (Object.hasOwn(pages,anchor) ? pages[anchor] : "") || (/^(?:afternoon-note-|personal-)/.test(anchor) ? "lecture" : "");
+  const gallery = /\/artwork(?:\.html)?$/.test(url.pathname);
+  const wallpaperAnchor = /^(?:wallpapers(?:-title)?|wallpaper-gallery(?:-\d+)?)$/.test(anchor);
+  if (gallery && !wallpaperAnchor) return;
+  if (wallpaperAnchor) {
+    url.pathname = new URL("./wallpapers.html",url).pathname;
+    location.replace(url);
+    return;
+  }
+  if (!page) return;
+  url.pathname = new URL("./" + page + ".html",url).pathname;
+  location.replace(url);
+})();
