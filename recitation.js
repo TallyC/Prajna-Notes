@@ -250,6 +250,7 @@
     action();
   });
 
+  if (!validId(savedPosition) && !validId(incomingCard)) save(positionKey,cards[index].id);
   renderCard();
   renderProgress();
   if (location.hash.startsWith("#sync=")) {

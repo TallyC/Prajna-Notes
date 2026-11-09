@@ -148,12 +148,30 @@
   });
   openLinkedPanel();
 
-  const resume = document.querySelector("[data-resume-reading]");
-  const lastChapter = readStored("prajna-last-chapter");
-  if (resume && /^(?:[1-9]|[12][0-9]|3[0-2])$/.test(lastChapter)) {
-    resume.href = "./kepan.html#chapter-" + lastChapter;
-    resume.textContent = "續讀第 " + lastChapter + " 分";
-    resume.parentElement.hidden = false;
+  const resumeReading = document.querySelector("[data-resume-reading]");
+  const resumeReciting = document.querySelector("[data-resume-reciting]");
+  const quickStart = document.querySelector("[data-home-start]");
+  if (resumeReading && resumeReciting && quickStart) {
+    const quickStartKey = "prajna-home-start-collapsed";
+
+    function refreshHome() {
+      const chapter = readStored("prajna-last-chapter");
+      const hasChapter = /^(?:[1-9]|[12][0-9]|3[0-2])$/.test(chapter);
+      resumeReading.href = hasChapter ? "./kepan.html#chapter-" + chapter : "./kepan.html";
+      resumeReading.textContent = hasChapter ? "讀 · 第 " + chapter + " 分" : "讀 · 開始讀經";
+
+      const card = readStored("prajna-recitation-position");
+      const hasCard = /^[1-9][0-9]*$/.test(card) && Number.isSafeInteger(Number(card));
+      resumeReciting.href = hasCard ? "./recitation.html?card=" + card + "#practice" : "./recitation.html#practice";
+      resumeReciting.textContent = hasCard ? "誦 · 第 " + card + " 張" : "誦 · 開始背誦";
+      quickStart.open = readStored(quickStartKey) !== "1";
+    }
+
+    refreshHome();
+    window.addEventListener("pageshow", event => {
+      if (event.persisted) refreshHome();
+    });
+    quickStart.addEventListener("toggle", () => storePreference(quickStartKey,quickStart.open ? "0" : "1"));
   }
 
   const welcome = document.querySelector("[data-first-visit]");

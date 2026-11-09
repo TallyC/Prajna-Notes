@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="prajna-release" content="5b42c714e0e22949b888">
+<meta name="prajna-release" content="8677ff85c80616a9d178">
 <meta name="theme-color" content="#e8dcc0">
 <meta name="apple-mobile-web-app-title" content="金剛經">
 <title>金剛經修行工具</title>
@@ -11,8 +11,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" href="./icons/prajna-192.png?v=2">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png?v=2">
-<link rel="stylesheet" href="./style.css?v=39">
-<script src="./reading-settings.js?v=12" defer></script>
+<link rel="stylesheet" href="./style.css?v=40">
+<script src="./reading-settings.js?v=13" defer></script>
 <script src="./site-update.js?v=6" defer></script>
 <script src="./legacy-links.js?v=3"></script>
 </head>
@@ -24,18 +24,24 @@
 <main data-reading-page="home">
   <section class="hero home-hero" aria-labelledby="page-title">
     <div class="home-intro">
+      <nav class="home-resume" aria-label="接續進度">
+        <a href="./kepan.html" data-resume-reading>讀 · 開始讀經</a>
+        <a href="./recitation.html#practice" data-resume-reciting>誦 · 開始背誦</a>
+      </nav>
       <p class="eyebrow">金剛般若波羅蜜經</p>
       <h1 id="page-title"><span>金剛經</span><span>修行工具</span></h1>
       <p class="subtitle">先讀一分，記下自己的理解，下次回來接著讀。</p>
-      <p class="reading-resume" hidden><a href="./kepan.html" data-resume-reading>接續讀經</a></p>
     </div>
     <figure class="home-folio">
-      <img src="./artwork/cards/19.webp" width="380" height="475" alt="一切有為法，如夢幻泡影，如露亦如電，應作如是觀。">
-      <figcaption><span>第三十二分</span> · <span>應化非真</span></figcaption>
+      <img src="./artwork/meditation-cover.webp" width="640" height="640" alt="灰藍衣袍的禪修者，在淡墨山影前靜坐。">
     </figure>
   </section>
-  <aside class="tool-start" aria-label="快速上手">
-    <p class="tool-start-title">快速上手</p>
+  <details class="tool-start home-start" data-home-start open>
+    <summary>
+      <span>快速上手</span>
+      <span class="home-start-action home-start-close">關閉 <span aria-hidden="true">×</span></span>
+      <span class="home-start-action home-start-open">展開 <span aria-hidden="true">＋</span></span>
+    </summary>
     <dl>
       <div><dt>有什麼</dt><dd>《金剛經》經文、講記、影音和圖卡。</dd></div>
       <div><dt>怎麼用</dt><dd>用「目」找分次，用「讀」看經文，用「誦」練背誦，用「持行」記心得。</dd></div>
@@ -43,7 +49,7 @@
       <div><dt>工具助益</dt><dd>讀過之後可接著背誦或記下疑問，下次從最近讀過的分次繼續。</dd></div>
     </dl>
     <a href="./guide.html#tool-guide">查看完整使用說明</a>
-  </aside>
+  </details>
   <nav class="home-nav ink-nav" aria-label="分頁導覽">
     <svg class="ink-symbol" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
       <symbol id="ink-ring" viewBox="0 0 100 100">
@@ -82,8 +88,9 @@
   <div data-first-visit></div>
   <!-- site-updates:start -->
   <details class="appendix" id="site-updates">
-    <summary>最近更新 · <time datetime="2026-11-09T10:52:28.025Z">2026/11/09 18:52</time>（臺灣時間）</summary>
+    <summary>最近更新 · <time datetime="2026-11-09T13:00:00.465Z">2026/11/09 21:00</time>（臺灣時間）</summary>
     <ul class="refs" id="site-update-list">
+      <li><time datetime="2026-11-09T13:00:00.465Z">2026/11/09 21:00</time> · 首頁快速上手可收合，封面換上禪修插畫，左上分別顯示上次讀經分次與背誦卡片。</li>
       <li><time datetime="2026-11-09T10:52:28.025Z">2026/11/09 18:52</time> · 快速上手、操作圖說、完整使用說明及讀經子工具提示，會跟著閱讀設定調整字體、字級和間距。</li>
       <li><time datetime="2026-11-09T10:18:01.837Z">2026/11/09 18:18</time> · 首頁將「參考與圖像」與「延伸閱讀」合成一張雙欄卡片，和上方「讀誦與持行」共用底色與外框。</li>
       <li><time datetime="2026-11-09T09:57:34.250Z">2026/11/09 17:57</time> · 首頁三組入口改成卡片，參考與圖像採霧青綠，延伸閱讀採灰紫；底部導覽加強按鈕與目前頁面的辨識。</li>
