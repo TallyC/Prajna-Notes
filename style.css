@@ -408,15 +408,15 @@ main .reading,main .session p:not(.eyebrow,.note-meta),main .topic-content p:not
   letter-spacing:.14em;
 }
 .home-nav-group .ink-row:last-child{gap:clamp(3px,1.3vw,12px);margin:0}
-.home-nav-group .ink-row:last-child li{flex-basis:66px}
-.home-nav-core .ink-row:last-child li{flex-basis:85px}
+.home-nav-group .ink-row:last-child li{flex-basis:88px}
+.home-nav-core .ink-row:last-child li{flex-basis:104px}
 .home-nav-group .ink-row a{
-  min-height:44px;
+  min-height:60px;
   border-radius:50%;
-  font-size:clamp(.78rem,3.35vw,.98rem);
+  font-size:clamp(1rem,3.6vw,1.18rem);
 }
 .home-nav-core .ink-row a{
-  font-size:clamp(1rem,4.4vw,1.3rem);
+  font-size:clamp(1.15rem,4.8vw,1.52rem);
   background:radial-gradient(ellipse,color-mix(in srgb,currentColor 10%,transparent),transparent 70%);
 }
 .home-nav-group .ink-row a svg{color:inherit;opacity:.6}
@@ -429,6 +429,19 @@ main .reading,main .session p:not(.eyebrow,.note-meta),main .topic-content p:not
   background:color-mix(in srgb,currentColor 8%,transparent);
 }
 .home-nav-group .ink-row a:is(:hover,:focus-visible) svg{opacity:.86}
+.home-giving{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(10px,2vw,20px);padding:clamp(14px,2.5vw,22px);margin:0 0 24px;border:1px solid var(--home-rule);border-radius:8px;background:color-mix(in srgb,var(--white) 68%,var(--paper))}
+.home-giving img{width:clamp(56px,8vw,72px);height:auto}
+.home-giving h2{margin:0 0 4px;font:650 clamp(1.05rem,2.5vw,1.35rem)/1.4 var(--serif)}
+.home-giving p{margin:0;line-height:1.65;color:var(--muted)}
+.home-giving a{white-space:nowrap;font-weight:650}
+@media(max-width:650px){.home-giving{grid-template-columns:auto minmax(0,1fr)}.home-giving a{grid-column:2;justify-self:start}}
+@media(max-width:650px){
+  .home-nav-secondary{grid-template-columns:1fr;gap:10px}
+  .home-nav-more{border-inline-start:0;border-top:1px solid var(--home-rule);padding-top:10px}
+  .home-nav-group .ink-row:last-child li{flex-basis:90px}
+  .home-nav-core .ink-row:last-child{flex-wrap:wrap;gap:10px}
+  .home-nav-core .ink-row:last-child li{flex:0 0 clamp(76px,22vw,88px)}
+}
 .home-page .first-visit{
   background:color-mix(in srgb,var(--white) 50%,transparent);
   border-color:var(--home-rule);
