@@ -1,0 +1,38 @@
+main > section.giving-panel:not(.hero),
+.giving-panel {
+  margin-block: 16px;
+  padding: clamp(14px, 3vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  scroll-margin-block: 16px;
+}
+.giving-panel h3 { margin-block: 0 .55em; }
+.giving-card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.giving-card-heading h2 { margin: 0; }
+.giving-card-heading time { color: var(--muted); }
+.giving-card {
+  margin-block-start: 16px;
+  padding-block-start: 16px;
+  border-top: 1px solid var(--line);
+}
+.giving-card blockquote {
+  margin-inline: 0;
+  padding-inline-start: 12px;
+  border-inline-start: 3px solid var(--line);
+}
+
+.giving-card-heading h2,
+.giving-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.giving-mark { flex: none; }
+:root[data-reading-theme="ink"] .giving-mark { background: #f3ead3; border-radius: 50%; }

@@ -406,8 +406,13 @@ for (const [label,items] of [["《金剛經》分次",chapterTopics],["編者雜
   appendNoteOptions(group,items);
   referenceSelect.append(group);
 }
-topicSelect.value = "reading";
-const linkedChapter = new URLSearchParams(location.search).get("chapter");
+const noteParams = new URLSearchParams(location.search);
+const linkedChapter = noteParams.get("chapter");
+const isGivingPractice = noteParams.get("practice") === "giving" && ["4","14","28"].includes(linkedChapter);
+topicSelect.value = isGivingPractice ? "practice-journal" : "reading";
+if (isGivingPractice) {
+  textField.placeholder = "我做了什麼？對方需要什麼？我察覺到什麼期待？";
+}
 if (/^(?:[1-9]|[12][0-9]|3[0-2])$/.test(linkedChapter)) {
   referenceSelect.value = "chapter-" + linkedChapter;
   noteSource.open = true;
