@@ -354,6 +354,12 @@ function renderNotebook(data) {
       element("p",check.aligned_statement,"reading"),element("p",check.limit,"reading"),sourceList(check.source_ids,sources)));
   }
   const {cards:extraCards,scriptureCards = [],wallpapers} = data.gallery_assets;
+  const imageRevision = document.querySelector('meta[name="prajna-release"]').content;
+  const chapter30Card = scriptureCards.find(card => card.title === "第 30 分 · 一合理相");
+  if (chapter30Card) {
+    chapter30Card.path = "./artwork/cards/verse-30-1-full.webp?v=" + imageRevision;
+    chapter30Card.preview = "./artwork/cards/verse-30-1.webp?v=" + imageRevision;
+  }
   const cards = [...extraCards,...originalCards];
   const relatedCards = new Map([...cards,...scriptureCards].map(card => [card.path,card]));
   renderRelatedCards(relatedCards.values());
