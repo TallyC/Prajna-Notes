@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="prajna-release" content="1e4f9e8cd9f7a4895a7d">
+<meta name="prajna-release" content="2d7519c195001377e027">
 <meta name="theme-color" content="#e8dcc0">
 <meta name="apple-mobile-web-app-title" content="金剛經">
 <title>持行記錄｜金剛經修行工具</title>
@@ -37,17 +37,19 @@
       <div><dt>工具助益</dt><dd>把尚未弄懂的地方和想實踐的事記下來，日後可搜尋或匯出備份。</dd></div>
     </dl>
     <a href="./guide.html#guide-journal">查看完整使用說明</a>
+  
+      <details class="appendix tool-help help-disclosure">
+      <summary><span>持行的使用說明</span><span class="help-action help-close">關閉 <span aria-hidden="true">×</span></span><span class="help-action help-open">展開 <span aria-hidden="true">＋</span></span></summary>
+        <figure class="guide-diagram">
+          <figcaption>操作圖說</figcaption>
+          <ol><li>選筆記分類</li><li>填寫內容</li><li>新增筆記</li></ol>
+        </figure>
+      <p>先依目的選經文摘記、理解與反思、疑問待查、修行實踐或隨手記。可展開「經文或主題」加上分次或講座主題。從讀誦頁點「修行記錄」會帶入分次。</p>
+      <p>在已儲存的筆記區可按分類查看、編輯或搜尋。換裝置前點「匯出備份」，把 JSON 檔交給新裝置，再點「匯入備份」。匯入會合併新筆記，已有的筆記會保留。</p>
+      <p><a href="./guide.html#guide-journal">在「使用說明」查看完整步驟</a></p>
+    </details>
   </details>
-  <details class="appendix tool-help help-disclosure">
-    <summary><span>持行的使用說明</span><span class="help-action help-close">關閉 <span aria-hidden="true">×</span></span><span class="help-action help-open">展開 <span aria-hidden="true">＋</span></span></summary>
-      <figure class="guide-diagram">
-        <figcaption>操作圖說</figcaption>
-        <ol><li>選筆記分類</li><li>填寫內容</li><li>新增筆記</li></ol>
-      </figure>
-    <p>先依目的選經文摘記、理解與反思、疑問待查、修行實踐或隨手記。可展開「經文或主題」加上分次或講座主題。從讀誦頁點「修行記錄」會帶入分次。</p>
-    <p>在已儲存的筆記區可按分類查看、編輯或搜尋。換裝置前點「匯出備份」，把 JSON 檔交給新裝置，再點「匯入備份」。匯入會合併新筆記，已有的筆記會保留。</p>
-    <p><a href="./guide.html#guide-journal">在「使用說明」查看完整步驟</a></p>
-  </details>
+  
     <form id="note-form">
       <label for="note-topic">筆記分類</label>
       <select id="note-topic"></select>
@@ -87,17 +89,19 @@
         <div><dt>工具助益</dt><dd>只記得片語或一個觀念時，也能回查原段或找出自己的筆記。</dd></div>
       </dl>
       <a href="./guide.html#guide-search">查看完整使用說明</a>
+    
+      <details class="appendix tool-help help-disclosure">
+      <summary><span>搜尋的使用說明</span><span class="help-action help-close">關閉 <span aria-hidden="true">×</span></span><span class="help-action help-open">展開 <span aria-hidden="true">＋</span></span></summary>
+        <figure class="guide-diagram">
+          <figcaption>操作圖說</figcaption>
+          <ol><li>輸入經句或關鍵字</li><li>選擇搜尋範圍</li><li>開啟結果</li></ol>
+        </figure>
+      <p>可輸入一小段經文或關鍵字。搜尋範圍可以選全部公開內容、經文、編者雜記、圖卡與桌布，或持行記錄。</p>
+      <p>要找自己寫過的內容，請選「持行記錄（僅此瀏覽器）」。點結果就能回到經文段落、雜記或對應的圖卡。</p>
+      <p><a href="./guide.html#guide-search">在「使用說明」查看完整步驟</a></p>
     </details>
-  <details class="appendix tool-help help-disclosure">
-    <summary><span>搜尋的使用說明</span><span class="help-action help-close">關閉 <span aria-hidden="true">×</span></span><span class="help-action help-open">展開 <span aria-hidden="true">＋</span></span></summary>
-      <figure class="guide-diagram">
-        <figcaption>操作圖說</figcaption>
-        <ol><li>輸入經句或關鍵字</li><li>選擇搜尋範圍</li><li>開啟結果</li></ol>
-      </figure>
-    <p>可輸入一小段經文或關鍵字。搜尋範圍可以選全部公開內容、經文、編者雜記、圖卡與桌布，或持行記錄。</p>
-    <p>要找自己寫過的內容，請選「持行記錄（僅此瀏覽器）」。點結果就能回到經文段落、雜記或對應的圖卡。</p>
-    <p><a href="./guide.html#guide-search">在「使用說明」查看完整步驟</a></p>
   </details>
+  
     <form id="search-form" role="search" aria-labelledby="search-title">
       <label for="search-query">經句或關鍵字</label>
       <div class="search-controls">
