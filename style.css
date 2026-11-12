@@ -600,3 +600,15 @@ main .reading,main .session p:not(.eyebrow,.note-meta),main .topic-content p:not
     grid-template-columns:1fr;
   }
 }
+
+.media-category{margin-top:24px;scroll-margin-top:12px}
+.media-category-title{margin:0 0 10px;font-family:var(--serif);font-size:1.2rem;line-height:1.4}
+.media-jump{margin-top:12px}
+.media-source{color:var(--muted);font-size:.9rem}
+.media-guide{margin-top:12px;border:1px solid var(--line);border-radius:8px;background:var(--soft)}
+.media-guide>summary{padding:9px 12px}
+.media-guide-content{padding:0 12px 12px}
+.media-guide-content p{margin:7px 0}
+.media-guide-content ul{margin:6px 0;padding-left:1.25rem}
+.media-guide-content li{margin:5px 0}
+.media-caveat{padding:8px 10px;border-left:3px solid var(--accent);background:var(--white);font-size:.9rem}
