@@ -612,3 +612,7 @@ main .reading,main .session p:not(.eyebrow,.note-meta),main .topic-content p:not
 .media-guide-content ul{margin:6px 0;padding-left:1.25rem}
 .media-guide-content li{margin:5px 0}
 .media-caveat{padding:8px 10px;border-left:3px solid var(--accent);background:var(--white);font-size:.9rem}
+
+.home-nav-more .ink-row li{display:flex;flex-direction:column;align-items:center;gap:3px}
+.home-nav-more .ink-row a{width:72px;flex:none}
+.home-nav-caption{color:var(--muted);font-size:clamp(.62rem,2.4vw,.72rem);line-height:1.2;text-align:center}
