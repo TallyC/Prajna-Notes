@@ -52,7 +52,7 @@
       }));
     } catch {}
     reloading = true;
-    status.textContent = "正在接收新版…";
+    if (status) status.textContent = "正在接收新版…";
     location.replace(url.href);
   }
 
@@ -101,5 +101,5 @@
   },true);
   document.getElementById("podcast-audio")?.addEventListener("pause",retryPending);
   document.getElementById("podcast-audio")?.addEventListener("ended",retryPending);
-  setInterval(checkForUpdate,60000);
+  setInterval(checkForUpdate,10000);
 })();
