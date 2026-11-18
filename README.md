@@ -26,7 +26,8 @@
 ## 網站入口
 
 - [金剛經修行工具 · GitHub Pages](https://tallyc.github.io/Prajna-Notes/)
-- [金剛藝藏](https://tallyc.github.io/Prajna-Notes/collection.html)：典藏經卷、書法、石刻、器物、當代創作與音樂，點選作品可閱讀深入說明。\n- [金剛經漫畫集](https://tallyc.github.io/Prajna-Notes/comics.html)：依果慨法師《金剛經：現代生活的覺醒導引》七集講座整理，逐頁閱讀共 33 頁。
+- [金剛藝藏](https://tallyc.github.io/Prajna-Notes/collection.html)：典藏經卷、書法、石刻、器物、當代創作與音樂，點選作品可閱讀深入說明。
+- [金剛經漫畫集](https://tallyc.github.io/Prajna-Notes/comics.html)：依果慨法師《金剛經：現代生活的覺醒導引》七集講座整理，逐頁閱讀共 33 頁。
 
 ## 經文與參考資料
 
